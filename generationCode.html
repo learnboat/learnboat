@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title></title>
+  <!-- <link rel="stylesheet" href="./lib/css/tailwind.css"> -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script>   -->
+
+
+  <!-- <script src="./lib/js/common.js"></script>   -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+  <!-- 引入样式 -->
+  <link href="lib/elementui/index.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./lib/css/daisyui.css">
+  <script src="./lib/js/tailwind4-3.js"></script>
+
+
+
+<body>
+
+  <div id="app">
+    <el-row>
+
+      <!-- 左边 -->
+      <el-col :span="8">
+        <el-row :span="16">
+
+          <div class="bg-orange-100 ">
+
+            <!-- 类别 -->
+            <div class="text-lg font-bold my-2 mx-2">按钮</div>
+            <div class="grid grid-cols-4 gap-2 my-4 mx-2">
+              <el-radio v-model="selectRadio" label="category_1_1"> 备选项11</el-radio>
+              <el-radio v-model="selectRadio" label="category_1_2"> 备选项12</el-radio>
+
+            </div>
+
+            <!-- 类别 -->
+            <div class="text-lg font-bold my-2 mx-2">按钮</div>
+            <div class="grid grid-cols-4 gap-2 my-4 mx-2">
+              <el-radio v-model="selectRadio" label="category_2_1"> 备选项21</el-radio>
+              <el-radio v-model="selectRadio" label="category_2_2"> 备选项22</el-radio>
+
+            </div>
+            <div class="btn btn-primary btn-sm my-2 mx-2" @click="onChoose">提交</div>
+            <div id='mount-point'>
+            </div>
+          </div>
+        </el-row>
+        <el-row>
+          <div class="bg-gray-100">
+
+            <!-- 属性 -->
+            <el-form v-show="selectOption === 'category_1_1'" ref="category_1_1" :model="category_1_1"
+              label-width="80px">
+              <el-form-item label="活动名称">
+                <el-input v-model="category_1_1.text1"></el-input>
+              </el-form-item>
+              <el-form-item label="活动名称">
+                <el-input v-model="category_1_1.text2"></el-input>
+              </el-form-item>
+            </el-form>
+
+
+             <!-- 属性 -->
+             <el-form v-show="selectOption === 'category_1_2'" ref="category_1_2" :model="category_1_1"
+             label-width="80px">
+             <el-form-item label="活动名称">
+               <el-input v-model="category_1_2.text1"></el-input>
+             </el-form-item>
+             <el-form-item label="活动名称">
+               <el-input v-model="category_1_2.text2"></el-input>
+             </el-form-item>
+           </el-form>
+
+          </div>
+
+
+          <div class="btn btn-primary btn-sm my-2 mx-2" @click="onChoose2">提交</div>
+
+        </el-row>
+
+      </el-col>
+
+
+      <!-- 右边 -->
+      <el-col :span="16">
+        <el-input :rows="30" id="copyTextArea" type="textarea" :rows="2" placeholder="请输入内容" v-model="textarea">
+        </el-input>
+
+      </el-col>
+    </el-row>
+
+
+
+
+  </div>
+
+  <script src="lib/vue/vue.js"></script>
+  <script src="lib/elementui/index.js"></script>
+  <script src="lib/js/FileSaver.js"></script>
+
+
+  <script type="text/javascript">
+
+
+
+    new Vue({
+      el: "#app",
+      data: {
+        textarea: '',
+        selectRadio: "1",
+        selectOption: "",
+        category_1_1: {
+          text1: "",
+          text2: "",
+          html: "<!-- zzzzzzzzzz占位符zzzzzzzzzzzzz --><div>{{text1}}{{text2}}</div><!-- zzzzzzzzzz占位符zzzzzzzzzzzzz -->"
+        },
+        category_1_2: {
+          text1: "",
+          text2: "",
+          html: "<!-- zasdfzzzz --><div>{{text1}}{{text2}}</div><!-- zzzzzasdfzzzz -->"
+        }
+      },
+      methods: {
+
+        onChoose() {
+          this.selectOption = this.selectRadio
+
+        },
+        replaceAll(string, search, replace) {
+          return string.split(search).join(replace);
+        },
+        copyContent() {
+          var copyTextArea = document.getElementById("copyTextArea");
+          copyTextArea.select();
+          var successful = document.execCommand('copy');
+          if (successful) {
+            this.$message({
+              message: '复制成功',
+              type: 'success'
+            });
+          }
+        },
+        onChoose2() {
+          let tempStr = undefined;
+
+          /////////////////////////////////////
+          tempStr = 'category_1_1';
+          if (this.selectOption == tempStr) {
+            for (let key in this[tempStr]) {
+              // 判断属性是否是对象自身的属性而非继承的属性
+              if (this[tempStr].hasOwnProperty(key)) {
+                if (key != 'html') {
+                  let temp1 = '{{'
+                  let temp2 = '}}'
+                  let temp3 = temp1 + key + temp2
+                  this[tempStr]['html'] = this.replaceAll(this[tempStr]['html'], temp3, this[tempStr][key])
+
+                  this.textarea = this[tempStr]['html']
+                  this.copyContent();
+                }
+
+              }
+            }
+          }
+
+          tempStr = 'category_1_2';
+          if (this.selectOption == tempStr) {
+            for (let key in this[tempStr]) {
+              // 判断属性是否是对象自身的属性而非继承的属性
+              if (this[tempStr].hasOwnProperty(key)) {
+                if (key != 'html') {
+                  let temp1 = '{{'
+                  let temp2 = '}}'
+                  let temp3 = temp1 + key + temp2
+                  this[tempStr]['html'] = this.replaceAll(this[tempStr]['html'], temp3, this[tempStr][key])
+
+                  this.textarea = this[tempStr]['html']
+                  this.copyContent();
+                }
+
+              }
+            }
+          }
+
+        },
+        
+
+
+      },
+      created() {
+
+      },
+      mounted() {
+        //   获取并监听iframe传递来的数据
+        let that = this;
+        window.addEventListener('message', function (e) {
+          var res = e.data;
+          console.log(res, 'iframe传递过来的数据');
+
+        });
+      }
+    })
+  </script>
+
+
+
+  <style>
+    .el-row {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</body>
+
+</html>

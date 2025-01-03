@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../../lib/assets/images/people/yang.svg">
+    <!-- 引入样式 -->
+    <title>学乐之舟</title>
+
+    <!--    <script src="../../lib/js/header_link.js"></script>-->
+    <link href="../../lib/elementui/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../lib/css/common.css" type="text/css">
+    <script src="../../lib/js/tailwind4-3.js"></script>
+
+<body class="bg-gray-50">
+
+<div id="app" class="">
+
+    <!--    从官网的例子-->
+    <header class="bg-[#3f3f46] text-white">
+        <nav class="mx-auto flex max-w-7xl items-start  p-5 md:px-8" aria-label="Global">
+            <div class="flex md:flex-1">
+                <div class=" text-gray-300 font-bold ">
+                    <img class=" inlineblock w-[40px]" src="/lib/assets/images/logos/logo.svg" alt="">&nbsp;学乐舟
+                </div>
+<!--                <a href="#" class="-m-1.5 p-1.5">-->
+<!--                    <span class="sr-only">Your Company</span>-->
+<!--                    &lt;!&ndash;                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">&ndash;&gt;-->
+<!--                </a>-->
+            </div>
+
+            <div class="hidden md:flex md:gap-x-12">
+
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest ">活动</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">项目</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">个人中心</a>
+            </div>
+            <div class="hidden md:flex md:flex-1 md:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class=" md:hidden  flex flex-1  justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">
+                    <img class="h-5 w-auto" src="../../lib/assets/images/baseConponetPic/menuright.svg" alt="">
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div class="fixed inset-y-0 right-0 z-10 w-[80%] overflow-y-auto bg-[#3f3f46] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                             alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Features</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Marketplace</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Company</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体 -->
+    <div class="w-full grid grid-cols-12  bg-white bg-tupian" >
+
+        <!-- 左边空置-->
+        <div class="hidden md:grid md:col-span-3 flex justify-center  ">
+            <div>
+                <div class="bg-gray-50 rounded-lg max-w-[400px] m-5 p-5 ">
+                    <div>
+                        <!--     标题1      -->
+                        <div @click="scrollTo_1()" style="cursor: pointer" class="hover:bg-gray-200 font-bold ">
+                            ？？？？？
+                        </div>
+                        <!--     标题2      -->
+                        <div class="ml-2 flex justify-start">
+                            <img class="h-[30px] w-[20px] mt-0 inlineblock"
+                                 src="../../lib/assets/images/baseConponetPic/menuline.svg" alt="">
+                            <div @click="scrollTo_1()" style="cursor: pointer" class="ml-2 hover:bg-gray-200 ">
+                                ？？？？？
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 内容主体 -->
+        <div class="col-span-12 md:col-span-6 flex justify-center py-4">
+
+            <div class="">
+                <el-breadcrumb class="ml-3 " separator="/">
+                    <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+                    <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
+                </el-breadcrumb>
+
+                <!-- 白色幕布 -->
+                <div class=" max-w-[750px]   min-w-[320px] md:min-w-[320px] mt-3  rounded-lg bg-[#ffedd5]">
+
+<!--                    章节标题-->
+                    <div class=" flex justify-start  ">
+                        <div class="rounded-md flex items-center  justify-start font-bold text-lg bg-[#fde68a]  mt-5 h-[60px]  ml-[-2%] titlebox">
+                            <img class="w-10 mt-[-20px]" src="../../lib/assets/images/baseConponetPic/zhangjie.svg"/>
+                           <p class="ml-5 mr-5 text-gray-700"> 第一节：什么是时间管理</p>
+                        </div>
+                    </div>
+
+                    <!--   聊天气泡框  【右】 上-->
+                    <div class=" flex justify-end">
+                        <div class="rounded-lg bg-white  leftborder  mt-8 mr-[30px] md:mr-[40px]
+                                 flex justify-end   max-w-[90%] md:max-w-[85%] ">
+
+                            <!-- 气泡内容 -->
+                            <div class="w-[100%]">
+                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]
+                                     leading-relaxed  text-xl
+                                    tracking-widest" style="word-wrap: break-word">
+                                    教授，为什么总感觉时间不够用
+                                </p>
+
+                            </div>
+                            <!-- 气泡头像-->
+                            <div class="mr-[-30px] mt-[-15px] md:mr-[-30px] md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full  ">
+                                        <img src="../../lib/assets/images/people/bear.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   聊天气泡框  【右】 下-->
+                    <!--   聊天气泡框  【右】 上-->
+                    <div class=" flex justify-end">
+                        <div class="rounded-lg bg-white  leftborder  mt-2 mr-[30px] md:mr-[40px]
+                                 flex justify-end   max-w-[90%] md:max-w-[85%] ">
+
+                            <!-- 气泡内容 -->
+                            <div class="w-[100%]">
+
+                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]
+                                     leading-relaxed  text-xl
+                                    tracking-widest" style="word-wrap: break-word">
+                                    有时候定了一些目标，自己拖延症很严重，
+                                </p>
+                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]
+                                     leading-relaxed  text-xl
+                                    tracking-widest" style="word-wrap: break-word">
+                                     结果往往不了了之。
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--   聊天气泡框  【右】 下-->
+                    <!--   聊天气泡框  【右】 上-->
+<!--                    <div class=" flex justify-end">-->
+<!--                        <div class="rounded-lg bg-white  leftborder  mt-2 mr-[30px] md:mr-[40px]-->
+<!--                                 flex justify-end   max-w-[90%] md:max-w-[85%] ">-->
+
+<!--                            &lt;!&ndash; 气泡内容 &ndash;&gt;-->
+<!--                            <div class="w-[100%]">-->
+
+<!--                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]-->
+<!--                                     leading-relaxed  text-xl-->
+<!--                                    tracking-widest" style="word-wrap: break-word">-->
+<!--                                    结果往往不了了之。-->
+<!--                                </p>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+                    <!--   聊天气泡框  【右】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white  rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]   "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start  w-[100%]">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class="   w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    这是个很好的问题，相信大家都有这个困扰。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white  rightborder mt-2  ml-[30px] md:ml-[40px] max-w-[90%]  "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start  w-[100%]">
+
+                            <!-- 气泡内容 -->
+                            <div class="   w-[100%]">
+
+
+                                <p class=" ml-[20px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    时间对每个人都是公平的，都是每天24小时。
+
+                                </p>
+
+                                <p class=" ml-[20px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    但是每个人对时间的使用方式不同，结果也因人而异。
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+                    <!-- 聊天气泡框  【左】 上-->
+<!--                    <div class="rounded-lg bg-white  rightborder mt-2  ml-[30px] md:ml-[40px] max-w-[90%]   "-->
+<!--                         style=" display: inline-block;">-->
+
+<!--                        <div class="flex justify-start  w-[100%]">-->
+
+<!--                            &lt;!&ndash; 气泡内容 &ndash;&gt;-->
+<!--                            <div class="   w-[100%]">-->
+
+<!--                                <p class=" ml-[20px] mr-[20px]    text-left mt-[17px]-->
+<!--                                    mb-[17px]  leading-relaxed-->
+<!--                                    text-xl  tracking-widest"-->
+<!--                                   style=" word-wrap: break-word">-->
+<!--                                    但是每个人对时间的使用方式不同，结果也因人而异。-->
+<!--                                </p>-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+                    <!-- 聊天气泡框  【左】 下-->
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white  rightborder mt-2  ml-[30px] md:ml-[40px] max-w-[90%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start  w-[100%]">
+
+                            <!-- 气泡内容 -->
+                            <div class="   w-[100%]">
+
+                                <p class=" ml-[20px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    这里我介绍一个概念： <span class="font-bold text-blue-500">时间管理</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+
+                    <!--   聊天气泡框  【右】 上-->
+                    <div class=" flex justify-end">
+                        <div class="rounded-lg bg-white  leftborder  mt-5 mr-[30px] md:mr-[40px]
+                                 flex justify-end   max-w-[90%] md:max-w-[85%] ">
+
+                            <!-- 气泡内容 -->
+                            <div class="w-[100%]">
+                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]
+                                    leading-relaxed  text-xl
+                                    tracking-widest" style="word-wrap: break-word">
+                                    时间管理大师罗x翔？
+                                    <img class="w-[35px] mr-[10px]   inlineblock"
+                                         src="../../lib/assets/images/emoji/xiaolei.svg"/>
+                                </p>
+                            </div>
+                            <!-- 气泡头像-->
+                            <div class="mr-[-30px] mt-[-15px] md:mr-[-30px] md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full  ">
+                                        <img src="../../lib/assets/images/people/monkey.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   聊天气泡框  【右】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px] leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    咳。。咳。。孩子你知道得太多~
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    简单来说，为了完成目标，我们会通过一些方法技巧和工具，去提高自己的办事效率，这个过程就是时间管理。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    大家有没有下面的困惑：
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!-- 投票  -->
+                    <div class="m-2 md:m-5">
+                        <el-tabs type="border-card" @tab-click="vote_tab_click_100001"
+                                 v-model="vote_tab_name_100001">
+                            <el-tab-pane label="投票" name="first">
+                                <div class="  rounded-lg  form-control" :model="voteform_100001">
+
+                                    <label v-for="item in voteform_100001" class="mt-[20px] flex justify-start">
+                                        <div class="mt-[5px]">
+                                            <input @click="vote_content_click_100001(item)" type="checkbox"
+                                                   :checked="item.ischecked=='checked'?'checked':'' "
+                                                   class="checkbox checkbox-warning w-[18px] h-[18px]"/>
+                                        </div>
+                                        <span class="tracking-widest text-gray-700 label-text  md:text-lg ml-[10px] ">
+                                                                                 {{item.name}}
+                                                                           </span>
+                                    </label>
+
+                                </div>
+                                <div class="flex justify-center">
+                                    <el-button class=" mt-5 bg-blue-500" @click="vote_action_100001()"
+                                               type="primary" :loading="vote_loading_100001">投票提交(可多选)
+                                    </el-button>
+                                </div>
+                            </el-tab-pane>
+                            <el-tab-pane label="投票结果" name="second">
+                                <div v-loading="vote_result_loading_100001" class="  rounded-lg  form-control bg-white"
+                                     :model="voteform_100001">
+
+                                    <div v-show="!vote_result_show_100001">需要投票完查看</div>
+                                    <label v-show="vote_result_show_100001" v-for="item in voteform_100001"
+                                           class="mt-[20px] flex justify-start">
+                                        <span>[</span><span class="text-blue-500">{{item.votepersen}}</span>
+                                        <span>]</span>
+                                        <span class="tracking-widest label-text text-sm md:text-lg ml-[10px]">
+                                                                                 {{item.name}}
+                                                                           </span>
+                                    </label>
+                                </div>
+                            </el-tab-pane>
+                        </el-tabs>
+                    </div>
+                    <!-- 投票  -->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-[#e0f2fe]   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px] leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    如果你们有上面的问题，可以去学习时间管理，和时间做朋友，培养好习惯，可以更容易实现自己的目标。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!--   聊天气泡框  【右】 上-->
+                    <div class=" flex justify-end">
+                        <div class="rounded-lg bg-white  leftborder  mt-5 mr-[30px] md:mr-[40px]
+                                 flex justify-end   max-w-[90%] md:max-w-[85%] ">
+
+                            <!-- 气泡内容 -->
+                            <div class="w-[100%]">
+                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]
+                                    leading-relaxed  text-xl
+                                    tracking-widest" style="word-wrap: break-word">
+                                    希望教授能够指点一二~
+                                </p>
+                            </div>
+                            <!-- 气泡头像-->
+                            <div class="mr-[-30px] mt-[-15px] md:mr-[-30px] md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full  ">
+                                        <img src="../../lib/assets/images/people/zhong.png"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   聊天气泡框  【右】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px] leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    没问题，我一定知无不言
+                                    <img class="w-[35px] mr-[10px]   inlineblock"
+                                         src="../../lib/assets/images/emoji/dese.svg"/>
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px] leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    <span class="font-bold text-orange-500">时间管理</span>，可以分成三要素：<span
+                                        class="font-bold text-blue-500">什么时候</span>，<span
+                                        class="font-bold text-blue-500">做什么样的事</span>，<span
+                                        class="font-bold text-blue-500">并记录</span>
+
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!-- 数字列表 上-->
+                    <div class="m-5  bg-[#fdefee] rounded-lg flex justify-start">
+                        <div class=" bg-[#e95f59]" style="width: 5px">&nbsp;&nbsp;</div>
+                        <ul class="text-lg tracking-widest text-gray-950">
+                            <li class=" rounded-lg pb-2">
+                                <div class="mt-2 ml-4">
+                                    <span class="font-bold">什么时候，</span>
+                                    意思是某一段时间，一般划分有整块时间和零碎时间。
+                                </div>
+                                <div class="mt-2 ml-4">
+                                    <span class="font-bold">做什么样的事，</span>
+                                    意思是事情重要性等级，一般划分紧急，重要，一般。
+                                </div>
+                                <div class="mt-2 ml-4">
+                                    <span class="font-bold">并记录，</span>
+                                    意思是通过什么方式去记录行程，有助于统计反思。
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 数字列表 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px] leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    接下来我们来逐个探讨。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!-- 点状列举列表 上-->
+                    <div class="m-5   rounded-lg">
+                        <ul class=" text-lg tracking-widest ">
+                            <li class=" bg-[#e0e7ff]  p-3 rounded-lg flex justify-start shadow text-[#082f49]">
+                                <img class="w-[25px] h-[25px] inlineblock mr-[15px]"
+                                     src="../../lib/assets/images/baseConponetPic/listkey.svg"/>
+                                <div class="leading-relaxed">
+                                    <span class="font-bold">什么时候</span>:
+                                    某一段时间，一般划分有整块时间和零碎时间。
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- 点状列举列表 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px] leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    <span class="font-bold">整块时间</span>，通常指的是那些连续、不受打扰的时间段，如工作日的午休时间、晚上的自由时间或周末的整天时间，甚至一个小时也算。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px] leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    这段时间可以专注于进行深度学习、大型项目的规划与实施或复杂问题的解决。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px] leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    这里介绍一种高效利用整块时间的管理方法：
+                                    <span class="font-bold text-blue-500">番茄工作法</span>。
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+                    <!-- 数字列表 上-->
+                    <div class="m-5  bg-[#fdefee] rounded-lg flex justify-start">
+                        <div class=" bg-[#e95f59]" style="width: 5px !important;">&nbsp;&nbsp;</div>
+                        <ul class="text-lg tracking-widest text-gray-950">
+                            <li class="  rounded-lg  pb-2">
+                                <div class="mt-2 ml-4">
+                                    <span class="font-bold">番茄工作法</span>
+                                    是一种时间管理方法，它将工作时间划分为一系列25分钟的时间段（称为“番茄时间”），每个时间段后安排短暂的休息，以此循环来提高工作效率和专注力。
+                                </div>
+                                <div class="mt-5 ml-4">
+                                    <span class="italic  text-gray-600">示意图：</span>
+                                </div>
+                                <!-- (单个)图片排列 -->
+                                <div class="flex justify-center m-5 p-2    rounded-lg bg-white">
+                                    <img class="rounded-lg md:w-[50%]" src="./lessionLib1/tomatoclock.png" alt="">
+                                </div>
+                                <!-- (单个)图片排列 -->
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- 数字列表 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    我来说说番茄工作法的具体步骤。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    首先，在开始使用番茄工作法之前，要明确你想要做的<span
+                                        class="font-bold">事情或者目标</span>。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    然后，选择一个时间周期，<span
+                                        class="font-bold ">通常为25分钟，称为一个“番茄时间”</span>。使用一个计时器（可以是手机应用、倒计时器或物理时钟）来设置这个时间周期。
+                                </p>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    在番茄时间开始后，致力于完成你设定的任务，<span
+                                        class="font-bold">全身心地专注于工作</span>。期间避免分散注意力的事情，如社交媒体、电子邮件等。只有在番茄时间结束之后才可以休息。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    番茄时间的中途不能中断，一旦中断，该番茄钟就成了 <span
+                                        class="font-bold">“烂番茄”</span>，无法继续计时，只能重新开始。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    每个番茄时间结束后，<span class="font-bold">休息5-10分钟</span>。利用这段时间休息、放松或做一些与工作无关的事情。自由活动可以帮助大脑得到短暂的休息，以便在下一个番茄时间更加专注。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    根据需要，你可以<span class="font-bold">继续进行番茄时间和休息</span>，形成连续的工作周期。每个番茄时间之间的休息可以用来重新评估和调整任务，以确保有效地推进工作。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <div class="mt-5 ml-5">
+                        <span class="italic  text-gray-600">示意图：</span>
+                    </div>
+                    <!-- (单个)图片排列 -->
+                    <div class="flex justify-center m-5 p-2   rounded-lg ">
+
+                        <img class="rounded-lg md:w-[70%]" src="./lessionLib1/tomatogongzuofa.svg" alt="">
+                    </div>
+                    <!-- (单个)图片排列 -->
+
+                    <div>
+                        <span class="font-bold text-blue-500">这里预留本系统功能 和 截图</span>
+                    </div>
+
+                    <!--   聊天气泡框  【右】 上-->
+                    <div class=" flex justify-end">
+                        <div class="rounded-lg bg-white  leftborder  mt-5 mr-[30px] md:mr-[40px]
+                                 flex justify-end   max-w-[90%] md:max-w-[85%] ">
+
+                            <!-- 气泡内容 -->
+                            <div class="w-[100%]">
+                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]
+                                    leading-relaxed  text-xl
+                                    tracking-widest" style="word-wrap: break-word">
+                                    番茄时间必须严格控制在25分钟吗？
+                                </p>
+                            </div>
+                            <!-- 气泡头像-->
+                            <div class="mr-[-30px] mt-[-15px] md:mr-[-30px] md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full  ">
+                                        <img src="../../lib/assets/images/people/niu.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   聊天气泡框  【右】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    番茄时间的长度通常是25分钟，但这不是绝对的。根据个人情况和任务难度，可以适当调整番茄时间的长度。重要的是保持专注和高效，而不是拘泥于固定的时间。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!--   聊天气泡框  【右】 上-->
+                    <div class=" flex justify-end">
+                        <div class="rounded-lg bg-white  leftborder  mt-5 mr-[30px] md:mr-[40px]
+                                 flex justify-end   max-w-[90%] md:max-w-[85%] ">
+
+                            <!-- 气泡内容 -->
+                            <div class="w-[100%]">
+                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]
+                                     leading-relaxed  text-xl
+                                    tracking-widest" style="word-wrap: break-word">
+                                    番茄工作法对我们有什么实际帮助吗？
+                                </p>
+                            </div>
+                            <!-- 气泡头像-->
+                            <div class="mr-[-30px] mt-[-15px] md:mr-[-30px] md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full  ">
+                                        <img src="../../lib/assets/images/people/bear.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   聊天气泡框  【右】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    番茄工作法能够提高专注力、工作效率和创造力；减轻压力、提高工作满意度和幸福感；增强时间管理能力等。此外，它还可以帮助人们更好地规划和管理时间，避免拖延和浪费时间。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!--   聊天气泡框  【右】 上-->
+                    <div class=" flex justify-end">
+                        <div class="rounded-lg bg-white  leftborder  mt-5 mr-[30px] md:mr-[40px]
+                                 flex justify-end   max-w-[90%] md:max-w-[85%] ">
+
+                            <!-- 气泡内容 -->
+                            <div class="w-[100%]">
+                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]
+                                    leading-relaxed  text-xl
+                                    tracking-widest" style="word-wrap: break-word">
+                                    在哪些场景我们可以用到它？
+                                </p>
+                            </div>
+                            <!-- 气泡头像-->
+                            <div class="mr-[-30px] mt-[-15px] md:mr-[-30px] md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full  ">
+                                        <img src="../../lib/assets/images/people/monkey.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   聊天气泡框  【右】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    番茄工作法适用于各种需要高度专注和效率的场景，如工作、学习、编程、写作等。然而，它并不是适用于所有人或所有情况的万能方法。对于一些需要高度创造性和灵活性的任务，如设计、音乐创作等，可能需要调整使用方式或选择其他时间管理方法。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                mb-[17px]  leading-relaxed
+                text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    好了好了，啰啰嗦嗦说得有点多，最后强调一点。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                mb-[17px]  leading-relaxed
+                text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    每天顺利完成了多少个完整的番茄钟？又产生了多少个烂番茄？以周为单位，根据记录，判断注意力是否越来越集中了，烂番茄的数量有没有减少，这些都是需要反思的问题。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    讲完整块时间，再聊聊零碎时间
+                                  </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    <span class="font-bold">零碎时间</span>，是指那些在日常生活中零散、不连续的时间片段。这些时间片段通常比较短暂，可能是几分钟到半小时不等，而且经常出现在等待、通勤、休息等日常活动的间隙中。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    零碎时间也是处理琐事和任务的好时机。
+                                </p>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!--   聊天气泡框  【右】 上-->
+                    <div class=" flex justify-end">
+                        <div class="rounded-lg bg-white  leftborder  mt-5 mr-[30px] md:mr-[40px]
+                                 flex justify-end   max-w-[90%] md:max-w-[85%] ">
+
+                            <!-- 气泡内容 -->
+                            <div class="w-[100%]">
+                                <p class="ml-[20px] mr-[10px]   text-left mt-[17px] mb-[17px]
+                                    leading-relaxed  text-xl
+                                    tracking-widest" style="word-wrap: break-word">
+                                    这些短暂的时间，也可以产生的价值吗？
+                                </p>
+                            </div>
+                            <!-- 气泡头像-->
+                            <div class="mr-[-30px] mt-[-15px] md:mr-[-30px] md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full  ">
+                                        <img src="../../lib/assets/images/people/monkey.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   聊天气泡框  【右】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    可以的。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    例如，回复电子邮件、整理桌面、制定第二天的工作计划等。这些任务虽然简单，但也需要一定的时间和精力去完成。在零碎时间内处理这些任务，可以避免它们在整块时间内占用我们的注意力。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    同时，我们也需要注意避免在碎片化时间中过度沉迷于社交媒体、游戏等容易分散注意力的活动，以免浪费这些宝贵的时间资源。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下---->
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- 右边空置 -->
+                    <div class="hidden md:grid md:col-span-3">
+
+                        <div class="floatBlockClass   relative  " >
+
+                            <button @click="gotoTop()"
+                                    class="absolute w-[60px] h-[60px] bottom-[100px] left-[20px] inline-flex  items-center justify-center rounded-full  shadow hover:bg-gray-100">
+                                <img src="../../lib/assets/images/baseConponetPic/toptip.svg" alt="Button Image"
+                                     class="w-[50%] h-[50%] object-cover object-center ">
+                            </button>
+
+                            <button @click="gotoNextPart()"
+                                    class="absolute w-[60px] h-[60px] bottom-[20px] left-[20px] inline-flex  items-center justify-center rounded-full  shadow hover:bg-gray-100">
+                                <img src="../../lib/assets/images/baseConponetPic/downtip.svg" alt="Button Image"
+                                     class="w-[50%] h-[50%] object-cover object-center ">
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <script src="../../lib/vue/vue.js"></script>
+            <script src="../../lib/elementui/index.js"></script>
+            <script src="../../lib/axios/axios.js"></script>
+            <script src="../../lib/js/common.js"></script>
+            <script src="../../lib/js/sweetalert2.js"></script>
+
+            <script type="text/javascript">
+
+
+                new Vue({
+                    el: "#app",
+                    data: {
+                        baseUrl: GetBaseUrl(),
+                        vote_tab_name_100001: "first",
+                        vote_loading_100001: false,
+                        vote_result_loading_100001: false,
+                        vote_result_show_100001: false,
+                        voteform_100001: [
+                            {
+                                name: '娱乐的时间不知不觉就过去了，每次立flag都雄心壮志，但一次次都改不了现状。',
+                                votepersen: "0%",
+                                ischecked: ''
+                            },
+                            {
+                                name: '告诉自己周五前必须做好某事，但抵挡不住综艺节目、刷短视频等等诱惑，潜意识以为离截止日期还早，不自觉地偷懒，拖延症严重。',
+                                votepersen: "0%",
+                                ischecked: ''
+                            },
+                            {
+                                name: '原来计划好的事情，经常被某些原因打断，总之，计划永远赶不上变化。',
+                                votepersen: "0%",
+                                ischecked: ''
+                            },
+                            {
+                                name: '每天工作很忙，没有多余的时间去完成计划。',
+                                votepersen: "0%",
+                                ischecked: ''
+                            },
+                            {
+                                name: '追求完美，在小细节上花费过多时间，影响了整体进度。',
+                                votepersen: "0%",
+                                ischecked: ''
+                            }
+                        ],
+                    },
+                    methods: {
+                        gotoTop() {
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth' // 平滑滚动
+                            });
+                        },
+                        gotoNextPart() {
+                            window.scrollBy({
+                                left: 0,
+                                top: window.innerHeight,
+                                behavior: 'smooth' // 平滑滚动
+                            });
+
+                        },
+
+                        vote_tab_get_result_100001() {
+                            let vote_100001 = getLocalStorage("vote_100001")
+                            if (vote_100001 == null) {
+                                return;
+                            }
+
+                            this.vote_result_loading_100001 = true
+                            axios({
+                                url: this.baseUrl + "/system/voteManage/get",
+                                method: "post",
+                                data: {
+                                    id: "100001",
+                                }
+                            }).then(({data}) => {
+                                this.vote_result_loading_100001 = false
+                                if (data && data.code === 200) {
+                                    let array = data.data.votelist.split(',');
+                                    let sum = 0;
+                                    for (let i = 0; i < array.length; i++) {
+                                        sum += parseInt(array[i]);
+                                    }
+                                    for (let i = 0; i < array.length; i++) {
+                                        this.voteform_100001[i].votepersen = Math.floor(array[i] * 100 / sum) + "%";
+                                    }
+
+                                    this.vote_result_show_100001 = true;
+                                } else {
+                                    this.$message.error(data.msg);
+                                }
+                            })
+                        },
+                        vote_tab_click_100001(tab, event) {
+                            if (tab.index == "1") {
+                                this.vote_tab_get_result_100001();
+                            }
+                        },
+                        vote_content_click_100001(item) {
+                            if (item.ischecked == "checked") {
+                                item.ischecked = ''
+                            } else {
+                                item.ischecked = 'checked'
+                            }
+                        },
+                        vote_action_100001() {
+
+                            let vote_100001 = getLocalStorage("vote_100001")
+                            if (vote_100001 != null) {
+                                this.$message.success("已经投过票了");
+                                return;
+                            }
+
+                            //校验是否有勾选
+                            let checkissum = 0;
+                            var arraytmp = []
+                            for (var i = 0; i < this.voteform_100001.length; i++) {
+                                if (this.voteform_100001[i].ischecked == 'checked') {
+                                    arraytmp.push(1)
+                                    checkissum++;
+                                } else {
+                                    arraytmp.push(0)
+                                }
+                            }
+                            if (checkissum == 0) {
+                                this.$message.error("需要勾选选项");
+                                return;
+                            }
+
+                            this.vote_loading_100001 = true
+                            let arraytmpstr = arraytmp.join(",")
+                            axios({
+                                url: this.baseUrl + "/system/voteManage",
+                                method: "post",
+                                data: {
+                                    votelist: arraytmpstr,
+                                    id: "100001",
+                                }
+                            }).then(({data}) => {
+                                this.vote_loading_100001 = false
+
+                                if (data && data.code === 200) {
+                                    this.$message.success("提交成功");
+                                    setLocalStorage("vote_100001", 1)
+                                    this.vote_tab_name_100001 = "second"
+                                    this.vote_tab_get_result_100001();
+                                } else {
+                                    this.$message.error(data.msg);
+                                }
+                            })
+
+                        }
+
+                    },
+                    created() {
+
+                    },
+                    mounted() {
+                    }
+                })
+
+
+            </script>
+
+</body>
+
+</html>

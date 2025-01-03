@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title></title>
+
+    <!-- 引入样式 -->
+    <link href="../lib/elementui/index.css" rel="stylesheet">
+
+    <script src="../lib/js/tailwind4-3.js"></script>
+
+
+<body class="">
+
+<div id="app">
+
+    <!--    从官网的例子-->
+    <header class="bg-[#3f3f46] text-white">
+        <nav class="mx-auto flex   items-start  p-5 md:px-8" aria-label="Global">
+            <div class="flex md:flex-1">
+                <a href="../index.html" class=" ">
+                    <div class="ml-2 text-gray-300 font-bold text-yellow-500">
+                        <img class=" inlineblock w-[26px]" src="/lib/assets/images/logos/logo.svg" alt="">&nbsp;学乐舟
+                    </div>
+                </a>
+            </div>
+            <!--            <div class="hidden md:flex md:gap-x-12">-->
+
+            <!--                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest ">活动</a>-->
+            <!--                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">项目</a>-->
+            <!--                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">个人中心</a>-->
+            <!--            </div>-->
+            <div class="hidden md:flex md:flex-1 md:justify-end">
+                <!--                <a href="#" class=" font-semibold leading-6 text-white">个人</a>-->
+                <el-dropdown  v-show="isLogin == null || isLogin == 0">
+                    <a href="#" class=" font-semibold leading-6 text-white">个人</a>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item @click.native="goto('../manage/noforgivelist.html')">工具</el-dropdown-item>
+                        <el-dropdown-item @click.native="">登录/注册</el-dropdown-item>
+                    </el-dropdown-menu>
+
+                </el-dropdown>
+
+                <el-dropdown  v-show="isLogin == 1">
+                    <a href="#" class=" font-semibold leading-6 text-white">个人</a>
+
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item @click.native="goto('')">工具</el-dropdown-item>
+                        <el-dropdown-item @click.native="goto('')">个人信息</el-dropdown-item>
+                        <el-dropdown-item @click.native="goto('')">退出登录</el-dropdown-item>
+                    </el-dropdown-menu>
+
+                </el-dropdown>
+
+            </div>
+            <div class=" md:hidden  flex flex-1  justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">
+                    <img class="h-5 w-auto" src="/lib/assets/images/baseConponetPic/menuright.svg" alt="">
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div class="fixed inset-y-0 right-0 z-10 w-[80%] overflow-y-auto bg-[#3f3f46] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                             alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Features</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Marketplace</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Company</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体 -->
+    <div class="w-full h-auto grid grid-cols-8 login-container"  >
+
+
+        <!-- 左边空置-->
+        <div class="hidden md:grid md:col-span-1 "></div>
+
+        <!-- 内容主体 -->
+        <div class="col-span-8 md:col-span-6 flex justify-center">
+
+            <div class="m-10 p-10  shadow  border border-slate-200 rounded-box w-[400px]">
+                <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+                    <el-tab-pane label="登录" name="first">
+
+                        <el-form ref="formRef_login" label-position="top" label-width="400px" :model="loginForm"
+                                 :rules="formRules" @submit.native.prevent>
+                            <!--                            <el-form-item class="text-blue-500" label="邮箱" prop="email" >-->
+                            <!--                                <el-input v-model="loginForm.email"  placeholder="请输入电子邮件"></el-input>-->
+                            <!--                            </el-form-item>-->
+                            <el-form-item class="text-blue-500" label="呢称" prop="nickname">
+                                <el-input v-model="loginForm.nickname" placeholder="请输入呢称"></el-input>
+                            </el-form-item>
+                            <el-form-item label="密码" prop="password">
+                                <el-input v-model="loginForm.password" type="password" placeholder="请输入密码"
+                                          :show-password="true" maxlength="18"></el-input>
+                            </el-form-item>
+
+                            <button @click="onSubmitLogin"
+                                    class="w-full bg-blue-500 text-white text-lg  font-bold  rounded-lg h-[40px] ">
+                                登录
+                            </button>
+
+
+                        </el-form>
+                    </el-tab-pane>
+                    <el-tab-pane label="注册" name="second">
+                        <el-form ref="formRef_loginup" label-position="top" label-width="400px" :model="loginupForm"
+                                 :rules="formRules" @submit.native.prevent>
+                            <!--                            <el-form-item class="text-blue-500" label="邮箱" prop="email" >-->
+                            <!--                                <el-input v-model="loginupForm.email"  placeholder="请输入电子邮件"></el-input>-->
+                            <!--                            </el-form-item>-->
+                            <el-form-item class="text-blue-500" label="呢称" prop="nickname">
+                                <el-input v-model="loginupForm.nickname" placeholder="请输入呢称"></el-input>
+                            </el-form-item>
+                            <el-form-item label="密码" prop="password">
+                                <el-input v-model="loginupForm.password" type="password" placeholder="请输入新密码"
+                                          :show-password="true" maxlength="18"></el-input>
+                            </el-form-item>
+
+                            <button @click="onSubmitLoginUp"
+                                    class="w-full bg-green-500 text-white text-lg  font-bold  rounded-lg h-[40px] ">
+                                注册
+                            </button>
+
+                        </el-form>
+                    </el-tab-pane>
+                </el-tabs>
+            </div>
+
+        </div>
+
+        <!-- 右边空置 -->
+        <div class="hidden md:grid md:col-span-1"></div>
+
+    </div>
+
+
+</div>
+
+<script src="../lib/vue/vue.js"></script>
+<script src="../lib/elementui/index.js"></script>
+<script src="../lib/axios/axios.js"></script>
+
+<script src="../lib/js/common.js"></script>
+
+<script type="text/javascript">
+
+
+    new Vue({
+        el: "#app",
+        data: {
+            baseUrl: GetBaseUrl(),
+            token: null,
+            activeName: 'first',
+            loginForm: {
+                // email:'',
+                nickname: '',
+                password: ''
+            },
+            loginupForm: {
+                // email:'',
+                nickname: '',
+                password: ''
+            },
+            formRules: {
+                password: [
+                    {message: '密码不能为空', trigger: 'blur'},
+                    {
+                        validator: function (rule, value, callback) {
+                            const reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/;  //校验密码6-18位
+                            if (!reg.test(value)) {
+                                callback(new Error('密码须包含数字、字母两种元素，且密码位数为6-18位'))
+                            } else {
+                                callback();
+                            }
+                        },
+                        trigger: 'blur',
+                    }
+                ],
+                nickname: [
+                    {message: '昵称不能为空', trigger: 'blur'},
+                    {
+                        validator: function (rule, value, callback) {
+                            if (value.trim() === '') {
+                                callback(new Error('昵称不能为空'))
+                            } else {
+                                callback();
+                            }
+                        },
+                        trigger: 'blur',
+                    }
+                ],
+                email: [
+                    {message: '邮箱不能为空', trigger: 'blur'},
+                    {
+                        validator: function (rule, value, callback) {
+                            const reg = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
+                            if (!reg.test(value)) {
+                                callback(new Error('请输入有效的邮箱地址'));
+                            } else {
+                                callback();
+                            }
+                        },
+                        trigger: 'blur',
+                    }
+                ],
+            }
+        },
+        methods: {
+            handleClick(tab, event) {
+                console.log(tab, event);
+            },
+            onSubmitLogin() {
+                this.$refs.formRef_login.validate((valid) => {
+                    console.log('valid', valid);
+                    if (valid) {
+                        axios({
+                            url: this.baseUrl + "/webapp/userInfo/login",
+                            method: "post",
+                            data: {
+                                password: this.loginForm.password,
+                                nickName: this.loginForm.nickname,
+                            }
+                        }).then(({data}) => {
+                            console.log(data)
+                            if (data && data.code === 200) {
+                                this.$message.success("登录成功");
+                                this.token = data.data.token;
+                                setLocalStorage("token",this.token)
+                            } else {
+                                this.$message.error(data.msg);
+
+                            }
+                        })
+                    } else {
+                        this.$message.warning("请填写完整的数据");
+                    }
+                })
+            },
+
+            onSubmitLoginUp() {
+                this.$refs.formRef_loginup.validate((valid) => {
+                    if (valid) {
+
+                        axios({
+                            url: this.baseUrl + "/webapp/userInfo/add",
+                            method: "post",
+                            data: {
+                                // email:this.loginupForm.email,
+                                password: this.loginupForm.password,
+                                nickName: this.loginupForm.nickname,
+                            }
+                        }).then(({data}) => {
+
+                            if (data && data.code === 200) {
+                                this.$message.success("注册成功");
+                                setTimeout(() => {
+                                    this.activeName = "first"
+                                }, 1500);
+                            } else {
+                                this.$message.error(data.msg);
+
+                            }
+
+                        })
+
+
+                    } else {
+                        this.$message.warning("请填写完整的数据");
+                    }
+                })
+            }
+        },
+        created() {
+
+        },
+        mounted() {
+        }
+    })
+
+
+</script>
+
+<style>
+    body {
+
+        /*background-color: #f0f4f8; !* 浅蓝色背景 *!*/
+
+    }
+
+
+</style>
+
+</body>
+
+</html>

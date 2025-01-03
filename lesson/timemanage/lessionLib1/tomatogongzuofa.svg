@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="603px"
+     height="473px" viewBox="-0.5 -0.5 603 473"
+     content="&lt;mxfile host=&quot;Electron&quot; modified=&quot;2024-08-06T01:08:40.896Z&quot; agent=&quot;5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) liuchengtu/4.4.7 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36&quot; etag=&quot;2QxdmUz7XQ0n-s6wFTsl&quot; background=&quot;rgb(255, 255, 255)&quot; version=&quot;14.7.8&quot; type=&quot;online&quot;&gt;&lt;diagram id=&quot;eN9RkP4LXmO3y60NwGkL&quot; name=&quot;第 1 页&quot;&gt;7VrLkqM2FP0aLZMCxENaAsaTRVKVql4kWRJQY2Ywcsly287X5wqEedpDu+nuTMV2l0u6eoDuuedwJRrhcHv6IuLd5jeesgJZRnpCeIUsy7Ed+FWGc20gjl0bMpGntclsDU/5P0wbDW095Cnb9zpKzguZ7/rGhJclS2TPFgvBj/1uz7zoX3UXZ2xkeEriYmz9I0/lRq/C8lr7LyzPNs2VTZfWLdu46ayn2G/ilB9rU7U4HCEcCs5lXdqeQlYo3zV+qT2wvtJ6uTHBSjlngFUPeImLg14bijxEHeT7KCKIhIjYKHJQ4CHfQZGNghWiIYpcFGDVrV6EPDeeEfxQpkxNbiIcHDe5ZE+7OFGtRwgFsG3kttDNeyn4t4sHMVieeSk13CaB+o6JfMskE2qSvMyUXfW7uE1NkxXxXgFqqIZvTCabplLNH/KCC7CUvGTqEnlRNCZk4fXahU9zab2QCTdq0wsTkp06Ju3WL4zDfYozdNGt1NHBqmPc0yFwbAPG1OAYm06wNMNiHaPZZeYWRihoJK+gao5hHSLFUghpXeVCbnjGy7iIWmvQx/LrYbtr+sciAUs76lfOd003JuVZQxgfJO8j3sXXmoyAPmYAEMaUrmHdwVVM9vwgEr0qrSMyFhnTvRonqwXfBE6wIpb5S5/jb4HBniAXQX6EgkixDKgEZcUpH5FAcYpgRIBl8GsgYlZMDKo+LvLB4r2Rbl3SDJk2RuIqrfpMqesdwExffefSj4RRGN5Cdz7jQGYHlLNHlLPsCcq5C1DOWZZxxnswbhrnvmQ2MWLcAHYUAH1Mn6vPIIJmsdcds5d8FnktugSiyUG8LCuh1wVyDO2k7+5G4QOc7s5STEf9Ul/JIgWjqyyUIp+gaI0CSFmgQJWGqj6QuxD4A4JCEVqIqxqphei66U7/O7o6h26frquW432csHoPYX27sJIxpU3zs5QVMvjXI7igdnYx6unzHbnnct7TQ3/nOVyi5Z5tOn3ukQGnakz1sO5O73sz2cOZ6oAZzeQLEZ873Xaqw/7WLQ/kornQ9Tsb6kt/ABTqe2ij6+LgeQG3yKP8R9wOTfH+0zIqbPxfM6qr8vsBXicTKZWtciKK9TGOyptGJzyPjOg1GRG2x6c775YRmROnOwq3EFGzOkUwkb/uJMe0Ktg3kmPnJ9N4pMdLBYPdAP8hwTB1guuo/ZI6wfUQiVQwDAGEpck+SnGRZyWUE3AEAy8FygF5Ehe+btjmaVoJsBLQvYZwjrsb0wD5+Z63jDLeXtYGYe2qozBVCJEf3sZmmFpg1xlh40xAg5c4hbXveLwt8kQDl4rzn5o3VeUvVfnZaaqrU7dxde5Q7HY+8tZ8uftUNCcei8sf1t6Xwxq4nyyb+l3HYinp1ceyv9IxrgqVJFNaKTZwuWkKwEtuoRj8t4BSpkoV60Ml7Op8xKtOlMdvcmCso4+W4bFPgoe035KP4Tsc7IyV3fTeSdktvES6/KPsWroi4L6LBoxJftlLN/tOY96O+A6+WxN7nzFhH2R8TZ51Yd738izn9dsoqLYv4Wu82/9kwNG/&lt;/diagram&gt;&lt;/mxfile&gt;"
+      >
+    <defs>
+        <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">div.MathJax_SVG_Display {
+            position: static;
+        }
+
+        span.MathJax_SVG {
+            position: static !important;
+        }</style>
+        <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">.MathJax_Hover_Frame {
+            border-radius: .25em;
+            -webkit-border-radius: .25em;
+            -moz-border-radius: .25em;
+            -khtml-border-radius: .25em;
+            box-shadow: 0px 0px 15px #83A;
+            -webkit-box-shadow: 0px 0px 15px #83A;
+            -moz-box-shadow: 0px 0px 15px #83A;
+            -khtml-box-shadow: 0px 0px 15px #83A;
+            border: 1px solid #A6D ! important;
+            display: inline-block;
+            position: absolute
+        }
+
+        .MathJax_Menu_Button .MathJax_Hover_Arrow {
+            position: absolute;
+            cursor: pointer;
+            display: inline-block;
+            border: 2px solid #AAA;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -khtml-border-radius: 4px;
+            font-family: 'Courier New', Courier;
+            font-size: 9px;
+            color: #F0F0F0
+        }
+
+        .MathJax_Menu_Button .MathJax_Hover_Arrow span {
+            display: block;
+            background-color: #AAA;
+            border: 1px solid;
+            border-radius: 3px;
+            line-height: 0;
+            padding: 4px
+        }
+
+        .MathJax_Hover_Arrow:hover {
+            color: white !important;
+            border: 2px solid #CCC !important
+        }
+
+        .MathJax_Hover_Arrow:hover span {
+            background-color: #CCC !important
+        } #xa;
+        </style>
+        <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">#MathJax_About {
+            position: fixed;
+            left: 50%;
+            width: auto;
+            text-align: center;
+            border: 3px outset;
+            padding: 1em 2em;
+            background-color: #DDDDDD;
+            color: black;
+            cursor: default;
+            font-family: message-box;
+            font-size: 120%;
+            font-style: normal;
+            text-indent: 0;
+            text-transform: none;
+            line-height: normal;
+            letter-spacing: normal;
+            word-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            float: none;
+            z-index: 201;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -khtml-border-radius: 15px;
+            box-shadow: 0px 10px 20px #808080;
+            -webkit-box-shadow: 0px 10px 20px #808080;
+            -moz-box-shadow: 0px 10px 20px #808080;
+            -khtml-box-shadow: 0px 10px 20px #808080;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+        }
+
+        #MathJax_About.MathJax_MousePost {
+            outline: none
+        }
+
+        .MathJax_Menu {
+            position: absolute;
+            background-color: white;
+            color: black;
+            width: auto;
+            padding: 2px;
+            border: 1px solid #CCCCCC;
+            margin: 0;
+            cursor: default;
+            font: menu;
+            text-align: left;
+            text-indent: 0;
+            text-transform: none;
+            line-height: normal;
+            letter-spacing: normal;
+            word-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            float: none;
+            z-index: 201;
+            box-shadow: 0px 10px 20px #808080;
+            -webkit-box-shadow: 0px 10px 20px #808080;
+            -moz-box-shadow: 0px 10px 20px #808080;
+            -khtml-box-shadow: 0px 10px 20px #808080;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+        }
+
+        .MathJax_MenuItem {
+            padding: 2px 2em;
+            background: transparent
+        }
+
+        .MathJax_MenuArrow {
+            position: absolute;
+            right: .5em;
+            padding-top: .25em;
+            color: #666666;
+            font-size: .75em
+        }
+
+        .MathJax_MenuActive .MathJax_MenuArrow {
+            color: white
+        }
+
+        .MathJax_MenuArrow.RTL {
+            left: .5em;
+            right: auto
+        }
+
+        .MathJax_MenuCheck {
+            position: absolute;
+            left: .7em
+        }
+
+        .MathJax_MenuCheck.RTL {
+            right: .7em;
+            left: auto
+        }
+
+        .MathJax_MenuRadioCheck {
+            position: absolute;
+            left: 1em
+        }
+
+        .MathJax_MenuRadioCheck.RTL {
+            right: 1em;
+            left: auto
+        }
+
+        .MathJax_MenuLabel {
+            padding: 2px 2em 4px 1.33em;
+            font-style: italic
+        }
+
+        .MathJax_MenuRule {
+            border-top: 1px solid #CCCCCC;
+            margin: 4px 1px 0px
+        }
+
+        .MathJax_MenuDisabled {
+            color: GrayText
+        }
+
+        .MathJax_MenuActive {
+            background-color: Highlight;
+            color: HighlightText
+        }
+
+        .MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {
+            background-color: #E8E8E8
+        }
+
+        .MathJax_ContextMenu:focus {
+            outline: none
+        }
+
+        .MathJax_ContextMenu .MathJax_MenuItem:focus {
+            outline: none
+        }
+
+        #MathJax_AboutClose {
+            top: .2em;
+            right: .2em
+        }
+
+        .MathJax_Menu .MathJax_MenuClose {
+            top: -10px;
+            left: -10px
+        }
+
+        .MathJax_MenuClose {
+            position: absolute;
+            cursor: pointer;
+            display: inline-block;
+            border: 2px solid #AAA;
+            border-radius: 18px;
+            -webkit-border-radius: 18px;
+            -moz-border-radius: 18px;
+            -khtml-border-radius: 18px;
+            font-family: 'Courier New', Courier;
+            font-size: 24px;
+            color: #F0F0F0
+        }
+
+        .MathJax_MenuClose span {
+            display: block;
+            background-color: #AAA;
+            border: 1.5px solid;
+            border-radius: 18px;
+            -webkit-border-radius: 18px;
+            -moz-border-radius: 18px;
+            -khtml-border-radius: 18px;
+            line-height: 0;
+            padding: 8px 0 6px
+        }
+
+        .MathJax_MenuClose:hover {
+            color: white !important;
+            border: 2px solid #CCC !important
+        }
+
+        .MathJax_MenuClose:hover span {
+            background-color: #CCC !important
+        }
+
+        .MathJax_MenuClose:hover:focus {
+            outline: none
+        } #xa;
+        </style>
+        <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">.MathJax_Preview .MJXf-math {
+            color: inherit !important
+        } #xa;
+        </style>
+        <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">#MathJax_Zoom {
+            position: absolute;
+            background-color: #F0F0F0;
+            overflow: auto;
+            display: block;
+            z-index: 301;
+            padding: .5em;
+            border: 1px solid black;
+            margin: 0;
+            font-weight: normal;
+            font-style: normal;
+            text-align: left;
+            text-indent: 0;
+            text-transform: none;
+            line-height: normal;
+            letter-spacing: normal;
+            word-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            float: none;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            box-shadow: 5px 5px 15px #AAAAAA;
+            -webkit-box-shadow: 5px 5px 15px #AAAAAA;
+            -moz-box-shadow: 5px 5px 15px #AAAAAA;
+            -khtml-box-shadow: 5px 5px 15px #AAAAAA;
+            filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+        }
+
+        #MathJax_ZoomOverlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 300;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            opacity: 0;
+            filter: alpha(opacity=0)
+        }
+
+        #MathJax_ZoomFrame {
+            position: relative;
+            display: inline-block;
+            height: 0;
+            width: 0
+        }
+
+        #MathJax_ZoomEventTrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 302;
+            display: inline-block;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            opacity: 0;
+            filter: alpha(opacity=0)
+        } #xa;
+        </style>
+        <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">.MathJax_Preview {
+            color: #888;
+            display: contents
+        }
+
+        #MathJax_Message {
+            position: fixed;
+            left: 1px;
+            bottom: 2px;
+            background-color: #E6E6E6;
+            border: 1px solid #959595;
+            margin: 0px;
+            padding: 2px 8px;
+            z-index: 102;
+            color: black;
+            font-size: 80%;
+            width: auto;
+            white-space: nowrap
+        }
+
+        #MathJax_MSIE_Frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0px;
+            z-index: 101;
+            border: 0px;
+            margin: 0px;
+            padding: 0px
+        }
+
+        .MathJax_Error {
+            color: #CC0000;
+            font-style: italic
+        } #xa;
+        </style>
+        <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">.MJXp-script {
+            font-size: .8em
+        }
+
+        .MJXp-right {
+            -webkit-transform-origin: right;
+            -moz-transform-origin: right;
+            -ms-transform-origin: right;
+            -o-transform-origin: right;
+            transform-origin: right
+        }
+
+        .MJXp-bold {
+            font-weight: bold
+        }
+
+        .MJXp-italic {
+            font-style: italic
+        }
+
+        .MJXp-scr {
+            font-family: MathJax_Script, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-frak {
+            font-family: MathJax_Fraktur, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-sf {
+            font-family: MathJax_SansSerif, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-cal {
+            font-family: MathJax_Caligraphic, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-mono {
+            font-family: MathJax_Typewriter, 'Times New Roman', Times, STIXGeneral, serif
+        }
+
+        .MJXp-largeop {
+            font-size: 150%
+        }
+
+        .MJXp-largeop.MJXp-int {
+            vertical-align: -.2em
+        }
+
+        .MJXp-math {
+            display: inline-block;
+            line-height: 1.2;
+            text-indent: 0;
+            font-family: 'Times New Roman', Times, STIXGeneral, serif;
+            white-space: nowrap;
+            border-collapse: collapse
+        }
+
+        .MJXp-display {
+            display: block;
+            text-align: center;
+            margin: 1em 0
+        }
+
+        .MJXp-math span {
+            display: inline-block
+        }
+
+        .MJXp-box {
+            display: block !important;
+            text-align: center
+        }
+
+        .MJXp-box:after {
+            content: " "
+        }
+
+        .MJXp-rule {
+            display: block !important;
+            margin-top: .1em
+        }
+
+        .MJXp-char {
+            display: block !important
+        }
+
+        .MJXp-mo {
+            margin: 0 .15em
+        }
+
+        .MJXp-mfrac {
+            margin: 0 .125em;
+            vertical-align: .25em
+        }
+
+        .MJXp-denom {
+            display: inline-table !important;
+            width: 100%
+        }
+
+        .MJXp-denom &gt; * {
+            display: table-row !important
+        }
+
+        .MJXp-surd {
+            vertical-align: top
+        }
+
+        .MJXp-surd &gt; * {
+            display: block !important
+        }
+
+        .MJXp-script-box &gt; * {
+            display: table !important;
+            height: 50%
+        }
+
+        .MJXp-script-box &gt; * &gt; * {
+            display: table-cell !important;
+            vertical-align: top
+        }
+
+        .MJXp-script-box &gt; *:last-child &gt; * {
+            vertical-align: bottom
+        }
+
+        .MJXp-script-box &gt; * &gt; * &gt; * {
+            display: block !important
+        }
+
+        .MJXp-mphantom {
+            visibility: hidden
+        }
+
+        .MJXp-munderover, .MJXp-munder {
+            display: inline-table !important
+        }
+
+        .MJXp-over {
+            display: inline-block !important;
+            text-align: center
+        }
+
+        .MJXp-over &gt; * {
+            display: block !important
+        }
+
+        .MJXp-munderover &gt; *, .MJXp-munder &gt; * {
+            display: table-row !important
+        }
+
+        .MJXp-mtable {
+            vertical-align: .25em;
+            margin: 0 .125em
+        }
+
+        .MJXp-mtable &gt; * {
+            display: inline-table !important;
+            vertical-align: middle
+        }
+
+        .MJXp-mtr {
+            display: table-row !important
+        }
+
+        .MJXp-mtd {
+            display: table-cell !important;
+            text-align: center;
+            padding: .5em 0 0 .5em
+        }
+
+        .MJXp-mtr &gt; .MJXp-mtd:first-child {
+            padding-left: 0
+        }
+
+        .MJXp-mtr:first-child &gt; .MJXp-mtd {
+            padding-top: 0
+        }
+
+        .MJXp-mlabeledtr {
+            display: table-row !important
+        }
+
+        .MJXp-mlabeledtr &gt; .MJXp-mtd:first-child {
+            padding-left: 0
+        }
+
+        .MJXp-mlabeledtr:first-child &gt; .MJXp-mtd {
+            padding-top: 0
+        }
+
+        .MJXp-merror {
+            background-color: #FFFF88;
+            color: #CC0000;
+            border: 1px solid #CC0000;
+            padding: 1px 3px;
+            font-style: normal;
+            font-size: 90%
+        }
+
+        .MJXp-scale0 {
+            -webkit-transform: scaleX(.0);
+            -moz-transform: scaleX(.0);
+            -ms-transform: scaleX(.0);
+            -o-transform: scaleX(.0);
+            transform: scaleX(.0)
+        }
+
+        .MJXp-scale1 {
+            -webkit-transform: scaleX(.1);
+            -moz-transform: scaleX(.1);
+            -ms-transform: scaleX(.1);
+            -o-transform: scaleX(.1);
+            transform: scaleX(.1)
+        }
+
+        .MJXp-scale2 {
+            -webkit-transform: scaleX(.2);
+            -moz-transform: scaleX(.2);
+            -ms-transform: scaleX(.2);
+            -o-transform: scaleX(.2);
+            transform: scaleX(.2)
+        }
+
+        .MJXp-scale3 {
+            -webkit-transform: scaleX(.3);
+            -moz-transform: scaleX(.3);
+            -ms-transform: scaleX(.3);
+            -o-transform: scaleX(.3);
+            transform: scaleX(.3)
+        }
+
+        .MJXp-scale4 {
+            -webkit-transform: scaleX(.4);
+            -moz-transform: scaleX(.4);
+            -ms-transform: scaleX(.4);
+            -o-transform: scaleX(.4);
+            transform: scaleX(.4)
+        }
+
+        .MJXp-scale5 {
+            -webkit-transform: scaleX(.5);
+            -moz-transform: scaleX(.5);
+            -ms-transform: scaleX(.5);
+            -o-transform: scaleX(.5);
+            transform: scaleX(.5)
+        }
+
+        .MJXp-scale6 {
+            -webkit-transform: scaleX(.6);
+            -moz-transform: scaleX(.6);
+            -ms-transform: scaleX(.6);
+            -o-transform: scaleX(.6);
+            transform: scaleX(.6)
+        }
+
+        .MJXp-scale7 {
+            -webkit-transform: scaleX(.7);
+            -moz-transform: scaleX(.7);
+            -ms-transform: scaleX(.7);
+            -o-transform: scaleX(.7);
+            transform: scaleX(.7)
+        }
+
+        .MJXp-scale8 {
+            -webkit-transform: scaleX(.8);
+            -moz-transform: scaleX(.8);
+            -ms-transform: scaleX(.8);
+            -o-transform: scaleX(.8);
+            transform: scaleX(.8)
+        }
+
+        .MJXp-scale9 {
+            -webkit-transform: scaleX(.9);
+            -moz-transform: scaleX(.9);
+            -ms-transform: scaleX(.9);
+            -o-transform: scaleX(.9);
+            transform: scaleX(.9)
+        }
+
+        .MathJax_PHTML .noError {
+            vertical-align: ;
+            font-size: 90%;
+            text-align: left;
+            color: black;
+            padding: 1px 3px;
+            border: 1px solid
+        } #xa;
+        </style>
+        <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">.MathJax_SVG_Display {
+            text-align: center;
+            margin: 1em 0em;
+            position: relative;
+            display: block !important;
+            text-indent: 0;
+            max-width: none;
+            max-height: none;
+            min-width: 0;
+            min-height: 0;
+            width: 100%
+        }
+
+        .MathJax_SVG .MJX-monospace {
+            font-family: monospace
+        }
+
+        .MathJax_SVG .MJX-sans-serif {
+            font-family: sans-serif
+        }
+
+        #MathJax_SVG_Tooltip {
+            background-color: InfoBackground;
+            color: InfoText;
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px #AAAAAA;
+            -webkit-box-shadow: 2px 2px 5px #AAAAAA;
+            -moz-box-shadow: 2px 2px 5px #AAAAAA;
+            -khtml-box-shadow: 2px 2px 5px #AAAAAA;
+            padding: 3px 4px;
+            z-index: 401;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: auto;
+            height: auto;
+            display: none
+        }
+
+        .MathJax_SVG {
+            display: inline;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 100%;
+            font-size-adjust: none;
+            text-indent: 0;
+            text-align: left;
+            text-transform: none;
+            letter-spacing: normal;
+            word-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            float: none;
+            direction: ltr;
+            max-width: none;
+            max-height: none;
+            min-width: 0;
+            min-height: 0;
+            border: 0;
+            padding: 0;
+            margin: 0
+        }
+
+        .MathJax_SVG * {
+            transition: none;
+            -webkit-transition: none;
+            -moz-transition: none;
+            -ms-transition: none;
+            -o-transition: none
+        }
+
+        .MathJax_SVG &gt; div {
+            display: inline-block
+        }
+
+        .mjx-svg-href {
+            fill: blue;
+            stroke: blue
+        }
+
+        .MathJax_SVG_Processing {
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            display: block !important
+        }
+
+        .MathJax_SVG_Processed {
+            display: none !important
+        }
+
+        .MathJax_SVG_test {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 100%;
+            font-size-adjust: none;
+            text-indent: 0;
+            text-transform: none;
+            letter-spacing: normal;
+            word-spacing: normal;
+            overflow: hidden;
+            height: 1px
+        }
+
+        .MathJax_SVG_test.mjx-test-display {
+            display: table !important
+        }
+
+        .MathJax_SVG_test.mjx-test-inline {
+            display: inline !important;
+            margin-right: -1px
+        }
+
+        .MathJax_SVG_test.mjx-test-default {
+            display: block !important;
+            clear: both
+        }
+
+        .MathJax_SVG_ex_box {
+            display: inline-block !important;
+            position: absolute;
+            overflow: hidden;
+            min-height: 0;
+            max-height: none;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            width: 1px;
+            height: 60ex
+        }
+
+        .mjx-test-inline .MathJax_SVG_left_box {
+            display: inline-block;
+            width: 0;
+            float: left
+        }
+
+        .mjx-test-inline .MathJax_SVG_right_box {
+            display: inline-block;
+            width: 0;
+            float: right
+        }
+
+        .mjx-test-display .MathJax_SVG_right_box {
+            display: table-cell !important;
+            width: 10000em !important;
+            min-width: 0;
+            max-width: none;
+            padding: 0;
+            border: 0;
+            margin: 0
+        }
+
+        .MathJax_SVG .noError {
+            vertical-align: ;
+            font-size: 90%;
+            text-align: left;
+            color: black;
+            padding: 1px 3px;
+            border: 1px solid
+        } #xa;
+        </style>
+    </defs>
+    <g>
+        <rect x="21" y="26" width="120" height="50" rx="7.5" ry="7.5" fill="#000000" stroke="none" pointer-events="all"
+              transform="translate(2,3)" opacity="0.25"/>
+        <rect x="21" y="26" width="120" height="50" rx="7.5" ry="7.5" fill="#ff6666" stroke="none"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+                               height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px;writing-mode:inherit; padding-top: 51px; margin-left: 22px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 18px; font-family: Arial; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                番茄工作法
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="81" y="56" fill="#000000" font-family="Arial" font-size="18px" text-anchor="middle"
+                      font-weight="bold">番茄工作法
+                </text>
+            </switch>
+        </g>
+        <path d="M 351.09 81 L 351.09 91.07 Q 351.09 101.07 351.09 99.05 L 351.09 98.04 Q 351.09 97.04 351.09 101.97 L 351.09 106.9"
+              fill="none" stroke="#3399ff" stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 351.09 113.65 L 346.59 104.65 L 351.09 106.9 L 355.59 104.65 Z" fill="#3399ff" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="231" y="21" width="240" height="60" rx="9" ry="9" fill="#000000" stroke="none" pointer-events="all"
+              transform="translate(2,3)" opacity="0.25"/>
+        <rect x="231" y="21" width="240" height="60" rx="9" ry="9" fill="#f8cecc" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+                               height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 238px; height: 1px;writing-mode:inherit; padding-top: 51px; margin-left: 232px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 18px; font-family: Arial; color: #1A1A1A; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                设置事情、目标
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="351" y="56" fill="#1A1A1A" font-family="Arial" font-size="18px" text-anchor="middle"
+                      font-weight="bold">设置事情、目标
+                </text>
+            </switch>
+        </g>
+        <path d="M 351.09 264 L 351.09 284.05 L 351.09 275.98 L 351.09 285.9" fill="none" stroke="#000000"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 351.09 292.65 L 346.59 283.65 L 351.09 285.9 L 355.59 283.65 Z" fill="#000000" stroke="#000000"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 351.09 264 Q 351.09 284.05 351.09 280.02 Q 351.09 275.98 351.09 285.9" fill="none" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 351.09 292.65 L 346.59 283.65 L 351.09 285.9 L 355.59 283.65 Z" fill="#3399ff" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="231" y="204" width="240" height="60" rx="9" ry="9" fill="#000000" stroke="none" pointer-events="all"
+              transform="translate(2,3)" opacity="0.25"/>
+        <rect x="231" y="204" width="240" height="60" rx="9" ry="9" fill="#f8cecc" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+                               height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 238px; height: 1px;writing-mode:inherit; padding-top: 234px; margin-left: 232px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 18px; font-family: Arial; color: #1A1A1A; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                设置定时器（通常25分钟）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="351" y="239" fill="#1A1A1A" font-family="Arial" font-size="18px" text-anchor="middle"
+                      font-weight="bold">设置定时器（通常25分钟）
+                </text>
+            </switch>
+        </g>
+        <path d="M 351.09 356 L 351.09 375.98 L 351.09 367.04 L 351.09 376.9" fill="none" stroke="#000000"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 351.09 383.65 L 346.59 374.65 L 351.09 376.9 L 355.59 374.65 Z" fill="#000000" stroke="#000000"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 486 427 Q 531.09 427.04 531.09 327.04 Q 531.09 227.04 496.1 227.01" fill="none" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 489.35 227 L 498.36 222.51 L 496.1 227.01 L 498.35 231.51 Z" fill="#3399ff" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 231 325.98 L 221.04 325.98 Q 211.09 325.98 211.09 326.51 L 211.09 326.77 Q 211.09 327.04 206.09 326.77 L 201.09 326.51"
+              fill="none" stroke="#3399ff" stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 194.35 326.86 L 203.1 321.89 L 201.09 326.51 L 203.57 330.88 Z" fill="#3399ff" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 351.09 356 Q 351.09 375.98 351.09 371.51 Q 351.09 367.04 351.09 376.9" fill="none" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 351.09 383.65 L 346.59 374.65 L 351.09 376.9 L 355.59 374.65 Z" fill="#3399ff" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="231" y="296" width="240" height="60" rx="9" ry="9" fill="#000000" stroke="none" pointer-events="all"
+              transform="translate(2,3)" opacity="0.25"/>
+        <rect x="231" y="296" width="240" height="60" rx="9" ry="9" fill="#f8cecc" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+                               height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 238px; height: 1px;writing-mode:inherit; padding-top: 326px; margin-left: 232px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 18px; font-family: Arial; color: #1A1A1A; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                专注工作
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="351" y="331" fill="#1A1A1A" font-family="Arial" font-size="18px" text-anchor="middle"
+                      font-weight="bold">专注工作
+                </text>
+            </switch>
+        </g>
+        <rect x="231" y="387" width="240" height="60" rx="9" ry="9" fill="#000000" stroke="none" pointer-events="all"
+              transform="translate(2,3)" opacity="0.25"/>
+        <rect x="231" y="387" width="240" height="60" rx="9" ry="9" fill="#f8cecc" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+                               height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 238px; height: 1px;writing-mode:inherit; padding-top: 417px; margin-left: 232px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 18px; font-family: Arial; color: #1A1A1A; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                休息时间（通常5-10分钟）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="351" y="422" fill="#1A1A1A" font-family="Arial" font-size="18px" text-anchor="middle"
+                      font-weight="bold">休息时间（通常5-10分钟）
+                </text>
+            </switch>
+        </g>
+        <rect x="531" y="312" width="50" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+                               height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px;writing-mode:inherit; padding-top: 327px; margin-left: 556px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 18px; font-family: Arial; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">
+                                循环
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="556" y="332" fill="#000000" font-family="Arial" font-size="18px" text-anchor="middle">循环
+                </text>
+            </switch>
+        </g>
+        <path d="M 106 297 Q 106 142.47 220.9 142.5" fill="none" stroke="#3399ff" stroke-width="3"
+              stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 227.65 142.5 L 218.65 147 L 220.9 142.5 L 218.65 138 Z" fill="#3399ff" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="21" y="297" width="170" height="60" rx="9" ry="9" fill="#000000" stroke="none" pointer-events="all"
+              transform="translate(2,3)" opacity="0.25"/>
+        <rect x="21" y="297" width="170" height="60" rx="9" ry="9" fill="#f8cecc" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+                               height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 168px; height: 1px;writing-mode:inherit; padding-top: 327px; margin-left: 22px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 18px; font-family: Arial; color: #1A1A1A; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                中断则重新<br/>开始番茄流程
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="106" y="332" fill="#1A1A1A" font-family="Arial" font-size="18px" text-anchor="middle"
+                      font-weight="bold">中断则重新&#xa;开始番茄流程
+                </text>
+            </switch>
+        </g>
+        <path d="M 351 147 L 351 193.9" fill="none" stroke="#3399ff" stroke-width="3" stroke-miterlimit="10"
+              pointer-events="stroke"/>
+        <path d="M 351 200.65 L 346.5 191.65 L 351 193.9 L 355.5 191.65 Z" fill="#3399ff" stroke="#3399ff"
+              stroke-width="3" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="231" y="117" width="240" height="51" rx="7.65" ry="7.65" fill="#000000" stroke="none"
+              pointer-events="all" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="231" y="117" width="240" height="51" rx="7.65" ry="7.65" fill="#f8cecc" stroke="none"
+              pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%"
+                               height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 238px; height: 1px;writing-mode:inherit; padding-top: 143px; margin-left: 232px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 18px; font-family: Arial; color: #1A1A1A; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                开始
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="351" y="148" fill="#1A1A1A" font-family="Arial" font-size="18px" text-anchor="middle"
+                      font-weight="bold">开始
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems"
+           target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text>
+        </a>
+    </switch>
+    <style xmlns="http://www.w3.org/1999/xhtml" type="text/css"></style>
+</svg>

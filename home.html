@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title></title>
+
+  <!-- 引入样式 -->
+  <link href="lib/elementui/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="./lib/css/daisyui.css">
+  <script src="./lib/js/tailwind4-3.js"></script>
+
+
+<body class="  h-[4000px]  bg-gray-50">
+
+  <div id="app">
+
+
+    <!-- 导航栏 -->
+    <div class="navbar bg-neutral text-neutral-content">
+
+
+
+      <!-- 导航栏左边 -->
+      <div class="navbar-start">
+        <!-- 移动尺寸显示 -->
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Item 1</a></li>
+            <li>
+              <a>Parent</a>
+              <ul class="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">learn</a>
+      </div>
+
+      <!-- 导航栏中间 -->
+      <div class="navbar-center hidden lg:flex">
+
+        <!-- <el-menu  :default-active="activeIndex" class="el-menu-demo bg-neutral text-base" mode="horizontal" @select="handleSelect">
+          <el-menu-item index="1">处理中心</el-menu-item>
+          <el-submenu index="2">
+            <template slot="title">我的工作台</template>
+            <el-menu-item index="2-1">选项1</el-menu-item>
+            <el-menu-item index="2-2">选项2</el-menu-item>
+            <el-menu-item index="2-3">选项3</el-menu-item>
+            <el-submenu index="2-4">
+              <template slot="title">选项4</template>
+              <el-menu-item index="2-4-1">选项1</el-menu-item>
+              <el-menu-item index="2-4-2">选项2</el-menu-item>
+              <el-menu-item index="2-4-3">选项3</el-menu-item>
+            </el-submenu>
+          </el-submenu>
+          <el-menu-item index="3" disabled>消息中心</el-menu-item>
+          <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+        </el-menu> -->
+
+
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Item 1</a></li>
+          <li>
+            <details class="dropdown">
+              <summary>Parent</summary>
+              <ul class="p-2 bg-neutral active:hidden ">
+                <li style="width: 150px;"><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a>Item 3</a></li>
+        </ul>
+
+      </div>
+
+      <!-- 导航栏右边 -->
+      <div class="navbar-end">
+        <!-- <a class="btn">Button</a> -->
+      </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="w-full h-auto grid grid-cols-8" >
+
+
+      <!-- 左边空置-->
+      <div class="hidden md:grid md:col-span-1 "></div>
+
+      <!-- 内容主体 -->
+      <div class="col-span-8 md:col-span-6 flex justify-center py-4">
+        <!-- 白色幕布 -->
+        <div class=" max-w-[750px]  min-w-[320px]  rounded-lg bg-gray-100">
+
+          <div v-for="item in 1">
+
+            <!-- 聊天气泡框  【左】 -->
+            <div class="rounded-lg bg-white  mt-10  ml-[35px] mr-[20px] md:mr-[50px] flex justify-start rightborder  ">
+              <!-- 气泡头像 -->
+              <div class="mt-[-40px] ml-[8px]">
+                <div class="avatar">
+                  <div class="w-[80px] rounded-full">
+                    <img src="lib/assets/images/people/yang.svg" />
+                  </div>
+                </div>
+              </div>
+              <!-- 气泡内容 -->
+              <div class="ml-[5px] items-center w-full "  >
+                <p class=" font-bold text-left mt-[15px] mb-[10px] mr-[10px]  md:mr-[20px] text-base leading-[30px] md:text-xl md:leading-[45px]  tracking-widest">
+                  问大家一个问题，你们班上谁学习最厉害?问大家一个问题，你们班上谁学习最厉害?问大家一个问题，你们班上谁学习最厉害?问大家一个问题，你们班上谁学习最厉害?
+                </p>
+              </div>
+            </div>
+
+
+            <!-- 聊天气泡框  【右】 -->
+            <div class="  mt-10 mr-[35px] flex justify-end  ">
+              <!-- 气泡内容 -->
+              <div class="mr-[-100px] items-center rounded-lg bg-white leftborder max-w-[80%] md:max-w-[80%] ">
+                <p class="font-bold text-left mr-[100px]  mt-[15px] mb-[10px]   ml-[20px] text-base leading-[30px] md:text-xl md:leading-[45px]   tracking-widest">
+                  那当然是班上的第一名 -_-~!
+                </p>
+              </div>
+              <!-- 气泡头像 -->
+              <div class="mr-[20px] mt-[-40px]">
+                <div class="avatar">
+                  <div class="w-[80px] rounded-full">
+                    <img src="lib/assets/images/people/niu.svg" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- 聊天气泡框  【左】 -->
+            <div class="rounded-lg bg-white  mt-10  ml-[35px] mr-[20px] md:mr-[50px] flex justify-start rightborder  ">
+              <!-- 气泡头像 -->
+              <div class="mt-[-40px] ml-[8px]">
+                <div class="avatar">
+                  <div class="w-[80px] rounded-full">
+                    <img src="lib/assets/images/people/bear.svg" />
+                  </div>
+                </div>
+              </div>
+              <!-- 气泡内容 -->
+              <div class="ml-[5px] items-center w-full "  >
+                <p class=" font-bold text-left mt-[15px] mb-[10px] mr-[10px]  md:mr-[20px] text-base leading-[30px] md:text-xl md:leading-[45px]  tracking-widest">
+                  啧啧，不对 <br>
+                  是你们的老师。
+                </p>
+              </div>
+            </div>
+
+
+            <!-- 聊天气泡框  【左】 -->
+            <div class="rounded-lg bg-white  mt-10  ml-[35px] mr-[20px] md:mr-[50px] flex justify-start rightborder  ">
+              <!-- 气泡头像 -->
+              <div class="mt-[-40px] ml-[8px]">
+                <div class="avatar">
+                  <div class="w-[80px] rounded-full">
+                    <img src="lib/assets/images/people/monkey.svg" />
+                  </div>
+                </div>
+              </div>
+              <!-- 气泡内容 -->
+              <div class="ml-[5px] items-center w-full "  >
+                <p class=" font-bold text-left mt-[15px] mb-[10px] mr-[10px]  md:mr-[20px] text-base leading-[30px] md:text-xl md:leading-[45px]  tracking-widest">
+                  老师先经过备课，把自己弄懂，准备联想事物，然后讲给大家听。
+                </p>
+              </div>
+            </div>
+
+            <!-- 聊天气泡框  【左】 -->
+<!--            <div class="rounded-lg bg-white  mt-10  ml-[35px] mr-[20px] md:mr-[50px] flex justify-start rightborder  ">-->
+<!--              &lt;!&ndash; 气泡头像 &ndash;&gt;-->
+<!--              <div class="mt-[-40px] ml-[-10px]">-->
+<!--                <div class="avatar">-->
+<!--                  <div class="w-[100px] rounded-full">-->
+<!--                    <img src="./assets/images/fox.png" />-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              &lt;!&ndash; 气泡内容 &ndash;&gt;-->
+<!--              <div class="ml-[5px] items-center w-full "  >-->
+<!--                <p class=" font-bold text-left mt-[15px] mb-[10px] mr-[10px]  md:mr-[20px] text-base leading-[30px] md:text-xl md:leading-[45px]  tracking-widest">-->
+<!--                  今年是好年，龙女。 <br>-->
+<!--                  Git Code是基于Gi-->
+<!--                  <a   onclick="my_modal_4.showModal()" class="icon-link" >-->
+<!--                    <i class="el-icon-thumb"></i>-->
+<!--                   长哦啊水电费-->
+<!--                 </a > t的代码托管服务,提供代码是<span class="text-2xl text-blue-300">仓库管理</span>。-->
+
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; 聊天气泡框  【右】 &ndash;&gt;-->
+<!--            <div class="  mt-10 mr-[35px] flex justify-end  ">-->
+<!--               &lt;!&ndash; 气泡内容 &ndash;&gt;-->
+<!--              <div class="mr-[-100px] items-center rounded-lg bg-white leftborder max-w-[80%] md:max-w-[80%] ">-->
+<!--                <p class="font-bold text-left mr-[100px]  mt-[15px] mb-[10px]   ml-[20px] text-base leading-[30px] md:text-xl md:leading-[45px]   tracking-widest">-->
+<!--                  今年是好年-->
+<!--                 </p>-->
+<!--              </div>-->
+<!--              &lt;!&ndash; 气泡头像 &ndash;&gt;-->
+<!--              <div class="mr-[0px] mt-[-40px]">-->
+<!--                <div class="avatar">-->
+<!--                  <div class="w-[100px] rounded-full">-->
+<!--                    <img src="./assets/images/lion.png" />-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </div>-->
+
+
+          </div>
+
+
+
+
+
+            <!--统计  -->
+          <div class="stats shadow mt-4  ml-[35px] mr-[35px] ">
+
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div class="stat-title">Downloads</div>
+              <div class="stat-value">31K</div>
+              <div class="stat-desc">Jan 1st - Feb 1st</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+              </div>
+              <div class="stat-title">New Users</div>
+              <div class="stat-value">4,200</div>
+              <div class="stat-desc">↗︎ 400 (22%)</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+              </div>
+              <div class="stat-title">New Registers</div>
+              <div class="stat-value">1,200</div>
+              <div class="stat-desc">↘︎ 90 (14%)</div>
+            </div>
+
+          </div>
+
+          <!-- 表格 -->
+          <div class="overflow-x-auto  ml-[35px] mr-[35px] mt-4">
+            <table class="table bg-white">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="text-lg">姓名</th>
+                  <th class="text-lg">职业</th>
+                  <th class="text-lg"> 最喜欢的颜色</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <tr class="">
+                  <th>1</th>
+                  <td> <img class="rounded-lg max-h-[200px]" src="./assets/images/v4.png" alt=""> </td>
+                  <td>的阿斯蒂</td>
+                  <td>啊实打实地方</td>
+                </tr>
+                <!-- row 2 -->
+                <tr>
+                  <th>2</th>
+                  <td>阿什顿发送到 Hagerty</td>
+                  <td>阿斯蒂芬 Support 阿斯顿发生</td>
+                  <td>阿什顿发送到</td>
+                </tr>
+                <!-- row 3 -->
+                <tr>
+                  <th>3</th>
+                  <td>Brice Swyre</td>
+                  <td>Tax Accountant</td>
+                  <td>Red</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 聊天气泡框  【右】 -->
+          <div class="  mt-10 mr-[35px] flex justify-end  ">
+            <!-- 气泡内容 -->
+            <div class="mr-[-100px] items-center rounded-lg bg-white leftborder max-w-[80%] md:max-w-[80%] ">
+              <p class="text-left mr-[100px]  mt-[15px] mb-[10px]   ml-[20px] text-base leading-[30px] md:text-lg md:leading-[45px]   tracking-widest">
+                今年是好年
+              </p>
+            </div>
+            <!-- 气泡头像 -->
+            <div class="mr-[0px] mt-[-40px]">
+              <div class="avatar">
+                <div class="w-[100px] rounded-full">
+                  <img src="./assets/images/lion.png" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 注释说明 -->
+          <div class="mt-4  ml-[35px] mr-[35px] flex justify-start  rounded-lg border-dotted border-2 border-gray-400 ">
+              <div class="w-[10px] bg-gray-300"></div>
+              <div class="w-full bg-gray-100">
+                  <p class="m-[20px] text-base  tracking-widest">Tailwind 不包括开箱即用的大量纵横比值，因为使用任意值更容易。有关详细信息，请参阅 任意值 部分
+                  </p>
+              </div>
+          </div>
+
+          <div class="flex justify-start text-2xl mt-4  ml-[35px] mr-[35px] text-xl tracking-widest">
+            <span class="w-[6px] bg-green-300 "></span>
+            <div class="mx-[10px] text-green-500">下面介绍如何:</div>
+          </div>
+
+          <!-- (单个)图片排列 -->
+          <div class="flex justify-center mt-4 p-4 ml-[35px] mr-[35px] border-solid border-2  rounded-lg bg-gray-100">
+            <img class="rounded-lg max-h-[400px]" src="./assets/images/v4.png" alt="">
+          </div>
+
+           <!-- (多个，最多三个)图片排列 -->
+          <div class="grid-cols-2 grid   gap-4  mt-4 p-4 ml-[35px] mr-[35px] border-solid border-2  rounded-lg bg-gray-100 ">
+            <div class="flex justify-center "><img class="rounded-lg w-full aspect-auto " src="./assets/images/v5.png" alt=""></div>
+            <div class="flex justify-center "><img class="rounded-lg w-full aspect-auto  " src="./assets/images/v5.png" alt=""></div>
+            <div class="flex justify-center "><img class="rounded-lg w-full aspect-auto  " src="./assets/images/v5.png" alt=""></div>
+          </div>
+
+
+
+          <!-- 按钮 -->
+          <button class="btn  mt-4  ml-[35px] mr-[35px]" onclick="my_modal_4.showModal()">open modal</button>
+          <dialog id="my_modal_4" class="modal">
+            <div class="modal-box">
+
+              <iframe   class="w-[500px]" src="./home copy 2.html" frameborder="0"></iframe>
+
+
+              <div class="modal-action">
+                <form method="dialog">
+                  <button class="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+
+           <!-- 点状列表 -->
+           <div class="mt-4  ml-[35px] mr-[35px] bg-base-100 p-2 rounded-lg">
+            <div class="text-2xl mx-2">asdfasd</div>
+            <ul class="list-disc mx-8 mt-2">
+              <li class="mt-2">阿斯蒂按时阿什顿发收到阿斯蒂按时按时</li>
+              <li class="mt-2">啊撒打发斯蒂芬阿斯蒂 2</li>
+              <li class="mt-2">撒的发生大事 3</li>
+            </ul>
+          </div>
+          <div class="rounded-lg bg-white  mt-10  ml-[35px] mr-[20px] md:mr-[50px] flex justify-start rightborder  ">
+            <!-- 气泡头像 -->
+            <div class="mt-[-40px] ml-[-10px]">
+              <div class="avatar">
+                <div class="w-[100px] rounded-full">
+                  <img src="./assets/images/fox.png" />
+                </div>
+              </div>
+            </div>
+            <!-- 气泡内容 -->
+            <div class="ml-[5px] items-center w-full "  >
+              <p class="text-left mt-[15px] mb-[10px] mr-[10px]  md:mr-[20px] text-base leading-[30px] md:text-lg md:leading-[45px]  tracking-widest">
+                今年是好年，龙女。 <br>
+                Git Code是基于Gi
+                <a   onclick="my_modal_4.showModal()" class="icon-link" >
+                  <i class="el-icon-thumb"></i>
+                  长哦啊水电费
+                </a > t的代码托管服务,提供代码是<span class="text-2xl text-blue-300">仓库管理</span>。
+
+              </p>
+            </div>
+          </div>
+          <!-- 输入框 -->
+          <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs mt-4  ml-[35px] mr-[35px]" />
+
+          <!-- 选项卡 -->
+          <div role="tablist" class="tabs tabs-lifted mt-4  ml-[35px] mr-[35px]">
+            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="生活生活生活" checked />
+            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+              Tab content 1
+            </div>
+
+            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="水壶"  />
+            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">Tab content 2</div>
+
+            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="三年" />
+            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">Tab content 3</div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <!-- 右边空置 -->
+      <div class="hidden md:grid md:col-span-1"></div>
+
+    </div>
+
+
+  </div>
+
+  <script src="./lib/js/reveal/reveal.js"></script>
+  <script src="lib/vue/vue.js"></script>
+  <script src="lib/elementui/index.js"></script>
+
+  <script type="text/javascript">
+
+    new Vue({
+      el: "#app",
+      data: {
+        activeIndex: '1',
+        activeIndex2: '1',
+        openn: false
+      },
+      methods: {
+
+        handleSelect(key, keyPath) {
+          console.log(key, keyPath);
+        },
+        clollllll() {
+          this.$refs.mgpDialogRef.close();
+
+          // document.getElementById('my_modal_1').open = true
+          // document.getElementsByClassName('dialog').close();
+          // console.log(document.getElementsByClassName('zzcdialog').close());
+          //  console.log(document.getElementById('my_modal_1').close());
+        }
+
+      },
+      created() {
+        console.log(1222222)
+      },
+      mounted() {
+      }
+    })
+
+
+    window.addEventListener('click', function (e) {
+
+      document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+
+        if (!dropdown.contains(e.target)) {
+          // Click was outside the dropdown, close it
+          dropdown.open = false;
+        }
+      });
+    });
+
+  </script>
+
+  <style>
+    .icon-link {
+
+      border-bottom:2px dashed blue;
+    text-decoration: none; /* 去除链接下划线 */
+    color: blue; /* 链接颜色 */
+
+}
+
+    .icon-link i {
+        margin-right: 0px; /* 图标和文本之间的距离 */
+    }
+
+    .rightborder{
+            border-top-width: 2px;
+            border-right-width: 5px;
+            border-bottom-width: 7px;
+            border-left-width: 2px;
+            border-style: solid;
+            border-color: #595959;
+        }
+
+    .leftborder{
+            border-top-width: 2px;
+            border-right-width: 2px;
+            border-bottom-width: 7px;
+            border-left-width: 5px;
+            border-style: solid;
+      border-color: #595959;
+        }
+  </style>
+
+
+
+</body>
+
+</html>

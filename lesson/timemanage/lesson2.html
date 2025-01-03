@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../../lib/assets/images/people/yang.svg">
+    <!-- 引入样式 -->
+    <title>学乐之舟</title>
+
+    <script src="../../lib/js/header_link.js"></script>
+
+
+<body class="bg-gray-50">
+
+<div id="app" class="">
+
+    <!--    从官网的例子-->
+    <header class="bg-[#3f3f46] text-white">
+        <nav class="mx-auto flex max-w-7xl items-start  p-5 md:px-8" aria-label="Global">
+            <div class="flex md:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <!--                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">-->
+                </a>
+            </div>
+
+            <div class="hidden md:flex md:gap-x-12">
+
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest ">活动</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">项目</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">个人中心</a>
+            </div>
+            <div class="hidden md:flex md:flex-1 md:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class=" md:hidden  flex flex-1  justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">
+                    <img class="h-5 w-auto" src="../../lib/assets/images/baseConponetPic/menuright.svg" alt="">
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div class="fixed inset-y-0 right-0 z-10 w-[80%] overflow-y-auto bg-[#3f3f46] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                             alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Features</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Marketplace</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Company</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体 -->
+    <div class="w-full grid grid-cols-12  bg-white ">
+
+        <!-- 左边空置-->
+        <div class="hidden md:grid md:col-span-3 flex justify-center  ">
+            <div>
+                <div class="bg-gray-50 rounded-lg max-w-[400px] m-5 p-5 ">
+                    <div>
+                        <!--     标题1      -->
+                        <div @click="scrollTo_1()" style="cursor: pointer" class="hover:bg-gray-200 font-bold ">
+                            ？？？？？
+                        </div>
+                        <!--     标题2      -->
+                        <div class="ml-2 flex justify-start">
+                            <img class="h-[30px] w-[20px] mt-0 inlineblock"
+                                 src="../../lib/assets/images/baseConponetPic/menuline.svg" alt="">
+                            <div @click="scrollTo_1()" style="cursor: pointer" class="ml-2 hover:bg-gray-200 ">
+                                ？？？？？
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 内容主体 -->
+        <div class="col-span-12 md:col-span-6 flex justify-center py-4">
+
+            <div class="">
+                <el-breadcrumb class="ml-3 " separator="/">
+                    <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+                    <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
+                </el-breadcrumb>
+
+                <!-- 白色幕布 -->
+                <div class=" max-w-[750px]   min-w-[320px] md:min-w-[320px] mt-3  rounded-lg bg-gray-50">
+
+                    <div>&nbsp;</div>
+                    <!-- 点状列举列表 上-->
+                    <div class="m-5 mb-0 mt-0   rounded-lg">
+                        <ul class=" text-lg tracking-widest ">
+                            <li class=" bg-[#e0e7ff]  p-3 rounded-lg flex justify-start shadow text-[#082f49]">
+                                <img class="w-[25px] h-[25px] inlineblock mr-[15px]"
+                                     src="../../lib/assets/images/baseConponetPic/listkey.svg"/>
+                                <div class="leading-relaxed">
+                                    做怎么样的事情
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- 点状列举列表 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    很多人分不清各项工作的轻重缓急，没有分清优先级就开始凭借自己的喜好来做，或者遇到困难的事情就一拖再拖。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    我们要考虑各项工作的提交日期、工作难以程度、完成这项工作需要耗费的时间等，在纸上标注1、2、3，几点前需要完成什么，完成一项工作就把该项任务划掉，这样把工作细分你会觉得目标感强，完成起来就非常容易了。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    所以接下来我要介绍<span class="font-bold text-blue-500">ABC时间管理法</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!-- 数字列表 上-->
+                    <div class="m-5  bg-[#fdefee] rounded-lg flex justify-start">
+                        <div class=" bg-[#e95f59]" style="width: 5px">&nbsp;&nbsp;</div>
+                        <ul class="text-lg tracking-widest text-gray-950">
+                            <li class=" rounded-lg pb-2">
+                                <div class="mt-2 ml-4">
+                                    <span class="font-bold"> ABC时间管理法</span>
+                                    是一种高效的时间管理工具，由美国管理学家莱金（Lakein）提出。该方法的核心思想是将待办事项按照重要程度划分为A、B、C三个等级，并依据这些等级来安排工作和分配时间。
+                                </div>
+
+                                <div class="mt-2 ml-4">
+                                    <span class="font-bold"> A级事务：</span>
+                                    最重要且必须完成的目标或任务。这些事务与实现个人或组织的关键目标紧密相关，一旦完成，将产生显著的效果。如果未能完成，可能会导致严重的后果。
+                                </div>
+                                <div class="mt-2 ml-4">
+                                    <span class="font-bold"> B级事务：</span>
+                                    较重要且应该完成的目标或任务。这些事务对于达到目标具有一定的帮助，但不如A级事务那样紧迫。它们可以在一定期限内推迟，但若规定的完成期限较短，则应迅速提升为A级事务。
+                                </div>
+                                <div class="mt-2 ml-4">
+                                    <span class="font-bold"> C级事务：</span>
+                                    不太重要且可以暂时搁置的目标或任务。这些事务的价值较低，无论其紧急程度如何，都应优先处理A级和B级事务后再行考虑。
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 数字列表 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    实现步骤也很简单。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                     首先，对工作清单进行分类，根据事务的重要性将其划分为A、B、C三个等级。
+                                </p>
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    然后，根据工作的重要性和紧急程度，确定各项任务的优先顺序，确保为A级事务分配足够的时间和精力。
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    接着，集中精力完成A类工作，效果满意后再转向B类工作。对于C类工作，在时间精力充沛的情况下可自行完成，但应尽量减少其占用时间，并可考虑委派他人执行以节省时间。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+
+                    <div class="m-2 p-5 bg-yellow-50">
+                        <el-timeline class="w-[80%] ">
+                            <el-timeline-item class="text-lg font-bold"
+                                    type="primary"
+                                    size="large">
+                                 对工作清单进行分类，根据事务的重要性将其划分为A、B、C三个等级。
+                            </el-timeline-item>
+                            <el-timeline-item
+                                    class="text-lg font-bold"
+                                    type="primary"
+                                    size="large">
+                                根据工作的重要性和紧急程度，确定各项任务的优先顺序，确保为A级事务分配足够的时间和精力。
+                            </el-timeline-item>
+                            <el-timeline-item
+                                    class="text-lg font-bold"
+                                    type="primary"
+                                    size="large">
+                                集中精力完成A类工作，效果满意后再转向B类工作。对于C类工作，在时间精力充沛的情况下可自行完成，但应尽量减少其占用时间，并可考虑委派他人执行以节省时间。
+                            </el-timeline-item>
+
+                        </el-timeline>
+                    </div>
+
+                    <!-- 聊天气泡框  【左】 上-->
+                    <div class="rounded-lg bg-white   rightborder mt-5  ml-[30px] md:ml-[40px] max-w-[90%]  md:max-w-[85%] "
+                         style=" display: inline-block;">
+
+                        <div class="flex justify-start ">
+                            <!-- 气泡头像 -->
+                            <div class="ml-[-30px]  mt-[-15px] md:ml-[-30px]  md:mt-[-10px]">
+                                <div class="avatar">
+                                    <div class="w-[50px] md:w-[70px] rounded-full ">
+                                        <img src="../../lib/assets/images/people/yang.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 气泡内容 -->
+                            <div class=" w-[100%]">
+                                <p class="md:ml-[10px] mr-[20px]    text-left mt-[17px]
+                                    mb-[17px]  leading-relaxed
+                                    text-xl  tracking-widest"
+                                   style=" word-wrap: break-word">
+                                    总之，ABC时间管理法是一种简单而有效的时间管理工具，它可以帮助个人或组织更好地规划工作和生活，提高时间利用率和工作效率。
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 聊天气泡框  【左】 下-->
+                    【逻辑图】
+                    [备忘录]
+                    【任务清单】
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- 右边空置 -->
+        <div class="hidden md:grid md:col-span-3">
+
+            <div class="floatBlockClass   relative  ">
+
+                <button @click="gotoTop()"
+                        class="absolute w-[60px] h-[60px] bottom-[100px] left-[20px] inline-flex  items-center justify-center rounded-full  shadow hover:bg-gray-100">
+                    <img src="../../lib/assets/images/baseConponetPic/toptip.svg" alt="Button Image"
+                         class="w-[50%] h-[50%] object-cover object-center ">
+                </button>
+
+                <button @click="gotoNextPart()"
+                        class="absolute w-[60px] h-[60px] bottom-[20px] left-[20px] inline-flex  items-center justify-center rounded-full  shadow hover:bg-gray-100">
+                    <img src="../../lib/assets/images/baseConponetPic/downtip.svg" alt="Button Image"
+                         class="w-[50%] h-[50%] object-cover object-center ">
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<script src="../../lib/vue/vue.js"></script>
+<script src="../../lib/elementui/index.js"></script>
+<script src="../../lib/axios/axios.js"></script>
+<script src="../../lib/js/common.js"></script>
+<script src="../../lib/js/sweetalert2.js"></script>
+
+<script type="text/javascript">
+
+
+    new Vue({
+        el: "#app",
+        data: {
+            baseUrl: GetBaseUrl(),
+        },
+        methods: {
+            gotoTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // 平滑滚动
+                });
+            },
+            gotoNextPart() {
+                window.scrollBy({
+                    left: 0,
+                    top: window.innerHeight,
+                    behavior: 'smooth' // 平滑滚动
+                });
+
+            },
+
+        },
+        created() {
+
+        },
+        mounted() {
+        }
+    })
+
+
+</script>
+
+
+</body>
+
+</html>

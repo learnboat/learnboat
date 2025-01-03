@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="art">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+</div>
+
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+    }
+
+    .art {
+        position: relative;
+        width: 300px;
+        height: 300px;
+    }
+
+    .wave {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #ff6347, #ffa500);
+        border-radius: 50%;
+        transform: rotate(var(--rotate));
+        animation: rotateWave 5s linear infinite;
+    }
+
+    .wave:nth-child(1) {
+        --rotate: 0deg;
+    }
+
+    .wave:nth-child(2) {
+        --rotate: 60deg;
+        animation-delay: -1.5s;
+    }
+
+    .wave:nth-child(3) {
+        --rotate: 120deg;
+        animation-delay: -3s;
+    }
+
+    .wave:nth-child(4) {
+        --rotate: 180deg;
+        animation-delay: -4.5s;
+    }
+
+    .wave:nth-child(5) {
+        --rotate: 240deg;
+        animation-delay: -6s;
+    }
+
+    .wave:nth-child(6) {
+        --rotate: 300deg;
+        animation-delay: -7.5s;
+    }
+
+    @keyframes rotateWave {
+        0% {
+            transform: rotate(var(--rotate)) translateX(0) translateY(0);
+        }
+        50% {
+            transform: rotate(var(--rotate)) translateX(20px) translateY(0);
+        }
+        100% {
+            transform: rotate(var(--rotate)) translateX(0) translateY(0);
+        }
+    }
+</style>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../../lib/assets/images/people/yang.svg">
+    <!-- 引入样式 -->
+    <title>学乐之舟</title>
+
+
+    <!-- 引入样式 -->
+    <link href="../../lib/elementui/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../lib/css/common.css" type="text/css">
+    <script src="../../lib/js/tailwind4-3.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+
+<body class="bg-gray-50">
+
+<div id="app" class="" v-cloak>
+
+
+    <div class="loading-modal-overlay"  id="zzcLoadingModal" >
+        <!-- 遮罩层内容，例如： -->
+        <div class="  w-full h-full flex items-center justify-center" >
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+    <!--    从官网的例子-->
+    <header class="bg-[#3f3f46] text-white">
+        <nav class="mx-auto flex max-w-7xl items-start  p-5 md:px-8" aria-label="Global">
+            <div class="flex md:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <!--                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">-->
+                </a>
+            </div>
+
+            <div class="hidden md:flex md:gap-x-12">
+
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest ">活动</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">项目</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">个人中心</a>
+            </div>
+            <div class="hidden md:flex md:flex-1 md:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class=" md:hidden  flex flex-1  justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">
+                    <img class="h-5 w-auto" src="../../lib/assets/images/baseConponetPic/menuright.svg" alt="">
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div class="fixed inset-y-0 right-0 z-10 w-[80%] overflow-y-auto bg-[#3f3f46] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                             alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Features</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Marketplace</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Company</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Log
+                                in</a>
+                        </div>
+                    </div>
+
+                    15-25  25-40 40<
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体 -->
+    <div class="w-full bg-gray-50 flex justify-center">
+
+        <!--        主体-->
+        <div class="w-full md:w-[70%] 2xl:w-[55%]   grid grid-cols-12  ">
+            <!--            左边-->
+            <div class="hidden md:grid md:col-span-3 m-3   rounded-lg">
+                <div class="text-sm text-gray-300">
+                    <div class="text-sm text-gray-300 p-3 flex justify-start">
+                        <img src="../../lib/assets/images/baseConponetPic/managezuobian.svg" alt=""
+                             class="w-[20px] h-[20px]">
+                        <p class="ml-2">时间管理</p>
+                    </div>
+                    <!--                    hover:bg-gray-200-->
+                    <div class="text-lg text-gray-600 font-bold bg-gray-200 rounded-lg p-2" style="cursor: pointer" >
+                        <p class="ml-10">备忘录</p>
+                    </div>
+                    <div class="text-lg text-gray-600   hover:bg-gray-200  rounded-lg p-2" style="cursor: pointer" >
+                        <p class="ml-10">番茄时间</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid col-span-12 md:grid md:col-span-8  p-5 bg-white">
+
+               <div class="w-full mt-2 flex justify-center ">
+                   <el-radio-group v-model="tabbb" @change="choosetab">
+                       <el-radio-button label="事项统计"></el-radio-button>
+                       <el-radio-button label="番茄统计"></el-radio-button>
+                   </el-radio-group>
+               </div>
+
+                <div v-show="tabbb == '事项统计'"  >
+
+                    <div class="flex justify-start  h-[30px] mt-5">
+                        <button @click=" "
+                                class="w-[80px] bg-green-500 text-white text-sm  font-bold  rounded-lg">
+                            上一周
+                        </button>
+                        <div class="mx-5 rounded-lg bg-gray-200 p-1">
+                            {{startTime}} &nbsp; 到 &nbsp; {{endTime}}
+                        </div>
+                        <button @click=" "
+                                class="w-[80px] bg-green-500 text-white text-sm  font-bold  rounded-lg ">
+                            下一周
+                        </button>
+                    </div>
+
+                    <div id="main" style="height:400px;" class="w-[500px]"></div>
+
+                    <div class="mt-2">
+                        <div >
+                            <div class="bg-red-400 rounded-lg p-2">
+                                等级A：完成率 20%
+                            </div>
+                            <div class="mt-2 text-xs text-gray-700">
+                                【已完成/计划】
+                            </div>
+                            <div v-for="item in 4" class="flex justify-start items-center mt-2">
+                                <div class="w-[80px] flex justify-center">
+                                    【10/10】
+                                </div>
+                                <div class="ml-5">阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇</div>
+
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="bg-blue-400 rounded-lg p-2">
+                                等级B：完成率 20%
+                            </div>
+                            <div class="mt-2 text-xs text-gray-700">
+                                【已完成/计划】
+                            </div>
+                            <div v-for="item in 4" class="flex justify-start items-center mt-2">
+                                <div class="w-[80px] flex justify-center">
+                                    【10/10】
+                                </div>
+                                <div class="ml-5">阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇</div>
+
+                            </div>
+                        </div>
+                        <div  class="mt-5">
+                            <div class="bg-yellow-400 rounded-lg p-2">
+                                等级C：完成率 20%
+                            </div>
+                            <div class="mt-2 text-xs text-gray-700">
+                                【已完成/计划】
+                            </div>
+                            <div v-for="item in 4" class="flex justify-start items-center mt-2">
+                                <div class="w-[80px] flex justify-center">
+                                    【10/10】
+                                </div>
+                                <div class="ml-5">阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇</div>
+
+                            </div>
+                        </div>
+
+                        <div  class="mt-5">
+                            <div class="bg-gray-400 rounded-lg p-2">
+                                无等级：完成率 20%
+                            </div>
+                            <div class="mt-2 text-xs text-gray-700">
+                                【已完成/计划】
+                            </div>
+                            <div v-for="item in 4" class="flex justify-start items-center mt-2">
+                                <div class="w-[80px] flex justify-center">
+                                    【10/10】
+                                </div>
+                                <div class="ml-5">阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇阅读10篇</div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div v-show="tabbb == '番茄统计'">
+                    <div class="flex justify-start  h-[30px] mt-5">
+                        <button @click=" "
+                                class="w-[80px] bg-green-500 text-white text-sm  font-bold  rounded-lg">
+                            上一周
+                        </button>
+                        <div class="mx-5 rounded-lg bg-gray-200 p-1">
+                            2024.10.10  -  2024.11.11
+                        </div>
+                        <button @click=" "
+                                class="w-[80px] bg-green-500 text-white text-sm  font-bold  rounded-lg ">
+                            下一周
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-8 gap-2 mt-5">
+                        <div class="grid  col-span-1 text-xs">
+                            <div class="w-[100px]">
+                                <div class="h-[30px]"></div>
+                                <div class="h-[30px]">00-06am</div>
+                                <div class="h-[30px]">07-08am</div>
+                                <div class="h-[30px]">09-10am</div>
+                                <div class="h-[30px]">11-12am</div>
+                                <div class="h-[30px]">01-02pm</div>
+                                <div class="h-[30px]">03-04pm</div>
+                                <div class="h-[30px]">05-06pm</div>
+                                <div class="h-[30px]">07-08pm</div>
+                                <div class="h-[30px]">09-10pm</div>
+                                <div class="h-[30px]">11-12pm</div>
+                            </div>
+
+                        </div>
+                        <div class="grid  col-span-1 text-sm">
+                            <div class="">
+                                <div class="h-[30px] "><p class="flex justify-center">周一</p></div>
+                                <div class="h-[30px] flex justify-center" v-for="item in fanqieList[0]">
+                                    <p v-if="item == 0 " class=" w-[25px] h-[25px] bg-gray-100">&nbsp;</p>
+                                    <p v-else-if="item <= 30 " class=" w-[25px] h-[25px] bg-red-200">&nbsp;</p>
+                                    <p v-else-if="item > 30 && item <= 60" class=" w-[25px] h-[25px] bg-red-400">&nbsp;</p>
+                                    <p v-else-if="item > 60" class=" w-[25px] h-[25px] bg-red-700">&nbsp;</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="grid  col-span-1 text-sm">
+                            <div class="">
+                                <div class="h-[30px] "><p class="flex justify-center">周二</p></div>
+                                <div class="h-[30px] flex justify-center" v-for="item in fanqieList[1]">
+                                    <p v-if="item == 0 " class=" w-[25px] h-[25px] bg-gray-100">&nbsp;</p>
+                                    <p v-else-if="item <= 30 " class=" w-[25px] h-[25px] bg-red-200">&nbsp;</p>
+                                    <p v-else-if="item > 30 && item <= 60" class=" w-[25px] h-[25px] bg-red-400">&nbsp;</p>
+                                    <p v-else-if="item > 60" class=" w-[25px] h-[25px] bg-red-700">&nbsp;</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="grid  col-span-1 text-sm">
+                            <div class="">
+                                <div class="h-[30px] "><p class="flex justify-center">周三</p></div>
+                                <div class="h-[30px] flex justify-center" v-for="item in fanqieList[2]">
+                                    <p v-if="item == 0 " class=" w-[25px] h-[25px] bg-gray-100">&nbsp;</p>
+                                    <p v-else-if="item <= 30 " class=" w-[25px] h-[25px] bg-red-200">&nbsp;</p>
+                                    <p v-else-if="item > 30 && item <= 60" class=" w-[25px] h-[25px] bg-red-400">&nbsp;</p>
+                                    <p v-else-if="item > 60" class=" w-[25px] h-[25px] bg-red-700">&nbsp;</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="grid  col-span-1 text-sm">
+                            <div class="">
+                                <div class="h-[30px] "><p class="flex justify-center">周四</p></div>
+                                <div class="h-[30px] flex justify-center" v-for="item in fanqieList[3]">
+                                    <p v-if="item == 0 " class=" w-[25px] h-[25px] bg-gray-100">&nbsp;</p>
+                                    <p v-else-if="item <= 30 " class=" w-[25px] h-[25px] bg-red-200">&nbsp;</p>
+                                    <p v-else-if="item > 30 && item <= 60" class=" w-[25px] h-[25px] bg-red-400">&nbsp;</p>
+                                    <p v-else-if="item > 60" class=" w-[25px] h-[25px] bg-red-700">&nbsp;</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="grid  col-span-1 text-sm">
+                            <div class="">
+                                <div class="h-[30px] "><p class="flex justify-center">周五</p></div>
+                                <div class="h-[30px] flex justify-center" v-for="item in fanqieList[4]">
+                                    <p v-if="item == 0 " class=" w-[25px] h-[25px] bg-gray-100">&nbsp;</p>
+                                    <p v-else-if="item <= 30 " class=" w-[25px] h-[25px] bg-red-200">&nbsp;</p>
+                                    <p v-else-if="item > 30 && item <= 60" class=" w-[25px] h-[25px] bg-red-400">&nbsp;</p>
+                                    <p v-else-if="item > 60" class=" w-[25px] h-[25px] bg-red-700">&nbsp;</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="grid  col-span-1 text-sm">
+                            <div class="">
+                                <div class="h-[30px] "><p class="flex justify-center">周六</p></div>
+                                <div class="h-[30px] flex justify-center" v-for="item in fanqieList[5]">
+                                    <p v-if="item == 0 " class=" w-[25px] h-[25px] bg-gray-100">&nbsp;</p>
+                                    <p v-else-if="item <= 30 " class=" w-[25px] h-[25px] bg-red-200">&nbsp;</p>
+                                    <p v-else-if="item > 30 && item <= 60" class=" w-[25px] h-[25px] bg-red-400">&nbsp;</p>
+                                    <p v-else-if="item > 60" class=" w-[25px] h-[25px] bg-red-700">&nbsp;</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="grid  col-span-1 text-sm">
+                            <div class="">
+                                <div class="h-[30px] "><p class="flex justify-center">周日</p></div>
+                                <div class="h-[30px] flex justify-center" v-for="item in fanqieList[6]">
+                                    <p v-if="item == 0 " class=" w-[25px] h-[25px] bg-gray-100">&nbsp;</p>
+                                    <p v-else-if="item <= 30 " class=" w-[25px] h-[25px] bg-red-200">&nbsp;</p>
+                                    <p v-else-if="item > 30 && item <= 60" class=" w-[25px] h-[25px] bg-red-400">&nbsp;</p>
+                                    <p v-else-if="item > 60" class=" w-[25px] h-[25px] bg-red-700">&nbsp;</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex justify-start mt-5">
+                        <p   class=" w-[18px] h-[18px] bg-red-200 ">&nbsp;</p>
+                        <p class="text-xs ml-[10px] mt-1"> 少于30分钟</p>
+                    </div>
+                    <div class="flex justify-start mt-2">
+                        <p   class=" w-[18px] h-[18px] bg-red-400 ">&nbsp;</p>
+                        <p class="text-xs ml-[10px] mt-1"> 大于30分钟，小于60分钟</p>
+                    </div>
+                    <div class="flex justify-start mt-2">
+                        <p  class=" w-[18px] h-[18px] bg-red-700 ">&nbsp;</p>
+                        <p class="text-xs ml-[10px] mt-1"> 大于60分钟</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+</div>
+
+<script type="text/javascript" src="../../lib/js/jquery-1.11.0.min.js"></script>
+
+<script src="../../lib/js/tailwind4-3.js"></script>
+<script src="../../lib/vue/vue.js"></script>
+<script src="../../lib/elementui/index.js"></script>
+<script src="../../lib/axios/axios.js"></script>
+<script src="../../lib/js/common.js"></script>
+<script src="../../lib/js/echarts.min.js"></script>
+<!--https://echarts.apache.org/handbook/zh/get-started/-->
+
+<script type="text/javascript">
+
+
+    var timer;
+
+    new Vue({
+        el: "#app",
+        data: {
+            pageId:null,
+            token: getLocalStorage("token"),
+            baseUrl: GetBaseUrl(),
+            tabbb:'事项统计',
+            fanqieList:[],
+            startTime:'',
+            endTime:'',
+        },
+        methods: {
+            handleClick(tab, event) {
+                console.log(tab, event);
+            },
+            choosetab(){
+                if(this.tabbb == '事项统计'){
+
+                }else{
+                    this.getFanqie();
+                }
+            },
+            getShixiang(){
+                axios({
+                    url: this.baseUrl + "/webapp/statics/shixiang",
+                    method: "post",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer '+this.token
+                    },
+                    data: {
+                        startTime:'2024-12-03' + " 00:00:00",
+                        endTime:'2024-12-31'+ " 23:59:59",
+                    }
+                }).then(({data}) => {
+                    if (data && data.code === 200) {
+                        console.log(data.data)
+                    } else {
+                        this.$message.error(data.msg);
+
+                    }
+                })
+            },
+            getFanqie(){
+                axios({
+                    url: this.baseUrl + "/webapp/statics/fanqie",
+                    method: "post",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer '+this.token
+                    },
+                    data: {
+                        startTime:'2024-12-02' + " 00:00:00",
+                        endTime:'2024-12-08'+ " 23:59:59",
+                    }
+                }).then(({data}) => {
+                    if (data && data.code === 200) {
+                        this.fanqieList = data.data
+                    } else {
+                        this.$message.error(data.msg);
+
+                    }
+                })
+            },
+            getWeekRangeSimplified(weeksOffset) {
+                const now = new Date();
+                const startOfYear = new Date(now.getFullYear(), 0, 1);
+                let dayOfYear = Math.floor((now - startOfYear) / (1000 * 60 * 60 * 24));
+                const firstMonday = new Date(startOfYear);
+                while (firstMonday.getDay() !== 1) {
+                    firstMonday.setDate(firstMonday.getDate() + 1);
+                }
+
+                const targetWeekStartDayOfYear = Math.floor(dayOfYear / 7) * 7 + 1 + weeksOffset * 7;
+                const adjustedTargetWeekStart = Math.max(1, targetWeekStartDayOfYear - (targetWeekStartDayOfYear + firstMonday.getDay() - 2) % 7 + firstMonday.getDay() - 1);
+                const targetMonday = new Date(startOfYear);
+                targetMonday.setDate(adjustedTargetWeekStart);
+
+                const targetSunday = new Date(targetMonday);
+                targetSunday.setDate(targetMonday.getDate() + 6);
+
+                const formatDate = (date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+
+                return {
+                    startTime: formatDate(targetMonday),
+                    endTime: formatDate(targetSunday)
+                };
+            }
+
+
+        },
+        mounted() {
+// 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+
+            // 指定图表的配置项和数据
+            let option =  {
+                // 全局调色盘。
+                color: ['#FF7F50', // 珊瑚色
+                '#FFD700', // 金色
+                '#90EE90', // 浅绿色
+                '#ADD8E6', // 浅蓝色
+                '#D3D3D3', // 亮灰色
+                '#FFB6C1', // 浅粉色
+                '#FFA07A', // 浅桃红色
+                '#20B2AA', // 浅青色（水绿色）
+                '#8A2BE2', // 蓝色紫罗兰
+                '#A9A9A9', // 暗灰色
+                '#DEB887', // 浅黄褐色
+                '#5F9EA0', // 浅海蓝色
+                '#7FFFD4', // 淡青色（水色）
+                '#F08080', // 浅珊瑚色
+                '#483D8B'], // 暗紫色,
+                series: [
+                    {
+                        type: 'pie',
+                        radius: '50%',
+                        //百分比
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: '{b}\n{c}({d}%)' //自定义显示格式(b:name, c:value, d:百分比)
+                            }
+                        },
+                        data: [
+                            {
+                                value: 335,
+                                name: '直接访问1'
+                            } , {
+                                value: 335,
+                                name: '直接访问2'
+                            } , {
+                                value: 335,
+                                name: '直接访问3'
+                            } , {
+                                value: 335,
+                                name: '直接访问4'
+                            } , {
+                                value: 335,
+                                name: '直接访问5'
+                            } , {
+                                value: 335,
+                                name: '直接访问6'
+                            } , {
+                                value: 335,
+                                name: '直接访问7'
+                            } , {
+                                value: 335,
+                                name: '直接访问8'
+                            } , {
+                                value: 335,
+                                name: '直接访问9'
+                            } , {
+                                value: 335,
+                                name: '直接访问10'
+                            } , {
+                                value: 335,
+                                name: '直接访问11'
+                            } , {
+                                value: 335,
+                                name: '直接访问12'
+                            } , {
+                                value: 335,
+                                name: '直接访问13'
+                            } , {
+                                value: 335,
+                                name: '直接访问14'
+                            } , {
+                                value: 335,
+                                name: '直接访问15'
+                            } ,
+                        ]
+                    }
+                ]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        },
+        created(){
+            this.startTime = this.getWeekRangeSimplified(0)["startTime"];
+            this.endTime = this.getWeekRangeSimplified(0)["endTime"];
+
+            this.getShixiang();
+        }
+    })
+
+
+</script>
+
+<style scoped>
+    ::v-deep .el-tabs__item {
+        color:green;
+        opacity: 0.5;
+    }
+
+</style>
+
+</body>
+
+</html>

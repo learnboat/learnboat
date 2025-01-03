@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="/lib/assets/images/people/yang.svg">
+    <!-- 引入样式 -->
+    <title>学乐之舟</title>
+
+    <script src="/lib/js/header_link.js"></script>
+
+
+<body class="bg-gray-50">
+
+<div id="app" class="">
+
+    <!--    从官网的例子-->
+    <header class="bg-[#3f3f46] text-white">
+        <nav class="mx-auto flex   items-start  p-5 md:px-8" aria-label="Global">
+            <div class="flex md:flex-1">
+                <a href="../index.html" class=" ">
+                    <div class="ml-2 text-gray-300 font-bold text-yellow-500">
+                        <img class=" inlineblock w-[26px]" src="/lib/assets/images/logos/logo.svg" alt="">&nbsp;学乐舟
+                    </div>
+                </a>
+            </div>
+            <!--            <div class="hidden md:flex md:gap-x-12">-->
+
+            <!--                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest ">活动</a>-->
+            <!--                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">项目</a>-->
+            <!--                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">个人中心</a>-->
+            <!--            </div>-->
+            <div class="hidden md:flex md:flex-1 md:justify-end">
+<!--                <a href="#" class=" font-semibold leading-6 text-white">个人</a>-->
+                <el-dropdown  v-show="isLogin == null || isLogin == 0">
+                    <a href="#" class=" font-semibold leading-6 text-white">个人</a>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item @click.native="goto('../tool/timeMange/noforgivelist.html')">工具</el-dropdown-item>
+                        <el-dropdown-item @click.native="goto('../login/index.html')">登录/注册</el-dropdown-item>
+                    </el-dropdown-menu>
+
+                </el-dropdown>
+
+                <el-dropdown  v-show="isLogin == 1">
+                    <a href="#" class=" font-semibold leading-6 text-white">个人</a>
+
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item @click.native="goto('')">工具</el-dropdown-item>
+                        <el-dropdown-item @click.native="goto('')">个人信息</el-dropdown-item>
+                        <el-dropdown-item @click.native="goto('')">退出登录</el-dropdown-item>
+                    </el-dropdown-menu>
+
+                </el-dropdown>
+
+            </div>
+            <div class=" md:hidden  flex flex-1  justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">
+                    <img class="h-5 w-auto" src="/lib/assets/images/baseConponetPic/menuright.svg" alt="">
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div class="fixed inset-y-0 right-0 z-10 w-[80%] overflow-y-auto bg-[#3f3f46] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                             alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Features</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Marketplace</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Company</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体 -->
+    <div class="w-full grid grid-cols-12   ">
+
+        <!-- 左边空置-->
+        <div class="hidden md:grid md:col-span-4 flex justify-center  m-10 bg-[#fffbeb]  text-gray-700 ">
+            <div class="   min-w-[100%] ">
+
+                <div class=" tracking-widest rounded-lg  mt-2   ">
+                    <div class="ml-2  text-[20px] text-gray-500 font-bold">人物介绍</div>
+                    <!--     标题2      -->
+                    <div class="ml-2 mt-2 flex justify-start rounded-lg   p-2   ">
+                        <img class="h-[55px] w-[55px] mt-0 inlineblock"
+                             src="/lib/assets/images/people/yang.svg" alt="">
+                        <div class="rounded-lg     ml-2 mt-[10px]  text-sm">
+                            羊博士，已退休老教授，博学多识，热爱教育，对知识有着无尽的追求。
+                        </div>
+                    </div>
+                    <div class="ml-1 mt-2 flex justify-start   rounded-lg   p-2 ">
+                        <img class="h-[55px] w-[55px] mt-0 inlineblock"
+                             src="/lib/assets/images/people/monkey.svg" alt="">
+                        <div class="rounded-lg     ml-2 mt-[10px]  text-sm">
+                            猴小聪，高中二年级，活泼顽皮，虽然有时候不太懂人情世故，但有着一颗对一切事物热忱的心。
+                        </div>
+                    </div>
+                    <div class="ml-1 mt-2 flex justify-start  rounded-lg  p-2 ">
+                        <img class="h-[55px] w-[55px] mt-0 inlineblock"
+                             src="/lib/assets/images/people/bear.svg" alt="">
+                        <div class="rounded-lg    ml-2 mt-[10px]  text-sm">
+                            熊玲玲，大学一年级，眼睛明亮而有神，总是闪烁着对新事物的好奇，对大学生活充满了向往，但也有不少的疑惑。
+                        </div>
+                    </div>
+                    <div class="ml-1 mt-2 flex justify-start  rounded-lg   p-2 ">
+                        <img class="h-[55px] w-[55px] mt-0 inlineblock"
+                             src="/lib/assets/images/people/niu.svg" alt="">
+                        <div class="rounded-lg    ml-2 mt-[10px]  text-sm">
+                            牛大强，大学毕业两年，目前在游戏公司做游戏开发，憨厚老实，有着一股不撞南墙不回头的牛劲。
+                        </div>
+                    </div>
+                    <div class="ml-2 m-2  text-[20px] text-gray-500 font-bold">故事背景</div>
+                    <div class="ml-2   flex justify-start  rounded-lg    ">
+
+                        <div class="tracking-widest mt-[0px] text-sm rounded-lg p-2  ml-2    text-sm">
+                            <!--                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                            每逢周末，猴小聪、熊玲玲、牛大强都会来到邻居家的羊博士这里玩耍，听他高谈论阔，探讨学习之道、人生之道。
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <!-- 内容主体 -->
+        <div class="col-span-12 md:col-span-8 flex justify-center py-4 bg-gray-50">
+
+            <div class="   min-w-[100%]">
+<!--                <el-breadcrumb class="ml-3 " separator="/">-->
+<!--                    <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>-->
+<!--                    <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>-->
+<!--                </el-breadcrumb>-->
+
+                <!-- 白色幕布 -->
+                <div class=" mt-0 rounded-lg">
+
+                    <div>
+
+                        <div class=" md:hidden rounded-lg  p-2 mt-2   ">
+
+                            <!--     标题2      -->
+                            <div class="ml-1 flex justify-start  p-1 ">
+                                <img class="h-[55px] w-[55px] mt-0 inlineblock"
+                                     src="/lib/assets/images/people/yang.svg" alt="">
+                                <div class="rounded-lg  text-[#21618C]  ml-2 mt-[10px]  text-lg">
+                                    羊教授
+                                </div>
+                            </div>
+                            <div class="ml-1   flex justify-start   p-1 ">
+                                <img class="h-[55px] w-[55px] mt-0 inlineblock"
+                                     src="/lib/assets/images/people/monkey.svg" alt="">
+                                <div class="rounded-lg  text-[#21618C] ml-2 mt-[10px]  text-lg">
+                                    猴小聪
+                                </div>
+                            </div>
+                            <div class="ml-1   flex justify-start   p-1 ">
+                                <img class="h-[55px] w-[55px] mt-0 inlineblock"
+                                     src="/lib/assets/images/people/bear.svg" alt="">
+                                <div class="rounded-lg  text-[#21618C]  ml-2 mt-[10px]  text-lg">
+                                    熊玲玲
+                                </div>
+                            </div>
+                            <div class="ml-1 flex justify-start   p-1 ">
+                                <img class="h-[55px] w-[55px] mt-0 inlineblock"
+                                     src="/lib/assets/images/people/niu.svg" alt="">
+                                <div class="rounded-lg   text-[#21618C] ml-2 mt-[10px]  text-lg">
+                                    牛大强
+                                </div>
+                            </div>
+                            <div class="ml-1  flex justify-start    p-1">
+
+                                <div class=" mt-[0px]  rounded-lg     text-[#21618C]  font-bold ml-2 mt-[10px]  text-lg">
+                                    <!--                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+                                    每逢周末，猴小聪、熊玲玲、牛大强都会来到邻居家的羊教授这里玩耍，听他高谈论阔，探讨学习之道、人生之道。
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="  rounded-lg  p-5 ">
+                            <div class="text-2xl font-bold text-sky-600">[时间管理]</div>
+                            <div class="mt-5 ">
+                                <div>
+                                    <div v-for="item in 2">
+                                        <!--     标题1      -->
+                                        <div @click="scrollTo_1()" style="cursor: pointer"
+                                             class="hover:bg-gray-200 font-bold  ">
+                                            <img class="h-[30px] w-[20px] mt-0 inlineblock"
+                                                 src="/lib/assets/images/baseConponetPic/nodetitile.svg" alt="">
+                                            第一章：阿斯顿发山东熬死的阿萨德熬死阿萨德撒
+                                        </div>
+                                        <!--     标题2      -->
+                                        <div class="m-5 flex justify-start ">
+                                            <!--                                            <img class="h-[30px] w-[20px] mt-0 inlineblock"-->
+                                            <!--                                                 src="/lib/assets/images/baseConponetPic/menuline.svg" alt="">-->
+                                            <div @click="scrollTo_1()" style="cursor: pointer"
+                                                 class="ml-2 hover:bg-gray-200 ">
+                                                阿斯顿发山东熬死的阿萨德熬死阿萨德撒
+                                            </div>
+                                        </div>
+                                        <!--     标题2      -->
+                                        <div class="m-5 flex justify-start ">
+                                            <!--                                            <img class="h-[30px] w-[20px] mt-0 inlineblock"-->
+                                            <!--                                                 src="/lib/assets/images/baseConponetPic/menuline.svg" alt="">-->
+                                            <div @click="scrollTo_1()" style="cursor: pointer"
+                                                 class="ml-2 hover:bg-gray-200 ">
+                                                阿斯顿发山东熬死的阿萨德熬死阿萨德撒
+                                            </div>
+                                        </div>
+                                        <!--     标题2      -->
+                                        <div class="m-5 flex justify-start ">
+                                            <!--                                            <img class="h-[30px] w-[20px] mt-0 inlineblock"-->
+                                            <!--                                                 src="/lib/assets/images/baseConponetPic/menuline.svg" alt="">-->
+                                            <div @click="scrollTo_1()" style="cursor: pointer"
+                                                 class="ml-2 hover:bg-gray-200 ">
+                                                阿斯顿发山东熬死的阿萨德熬死阿萨德撒
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--                        -->
+                        <div class="  rounded-lg  p-5 ">
+                            <div class="text-2xl font-bold text-sky-600">[学习方法]</div>
+                            <div class="mt-5 ">
+                                <div>
+                                    <div v-for="item in 2">
+                                        <!--     标题1      -->
+                                        <div @click="scrollTo_1()" style="cursor: pointer"
+                                             class="hover:bg-gray-200 font-bold  ">
+                                            <img class="h-[30px] w-[20px] mt-0 inlineblock"
+                                                 src="/lib/assets/images/baseConponetPic/nodetitile.svg" alt="">
+                                            第一章：阿斯顿发山东熬死的阿萨德熬死阿萨德撒
+                                        </div>
+                                        <!--     标题2      -->
+                                        <div class="m-5 flex justify-start ">
+                                            <!--                                            <img class="h-[30px] w-[20px] mt-0 inlineblock"-->
+                                            <!--                                                 src="/lib/assets/images/baseConponetPic/menuline.svg" alt="">-->
+                                            <div @click="scrollTo_1()" style="cursor: pointer"
+                                                 class="ml-2 hover:bg-gray-200 ">
+                                                阿斯顿发山东熬死的阿萨德熬死阿萨德撒
+                                            </div>
+                                        </div>
+                                        <!--     标题2      -->
+                                        <div class="m-5 flex justify-start ">
+                                            <!--                                            <img class="h-[30px] w-[20px] mt-0 inlineblock"-->
+                                            <!--                                                 src="/lib/assets/images/baseConponetPic/menuline.svg" alt="">-->
+                                            <div @click="scrollTo_1()" style="cursor: pointer"
+                                                 class="ml-2 hover:bg-gray-200 ">
+                                                阿斯顿发山东熬死的阿萨德熬死阿萨德撒
+                                            </div>
+                                        </div>
+                                        <!--     标题2      -->
+                                        <div class="m-5 flex justify-start ">
+                                            <!--                                            <img class="h-[30px] w-[20px] mt-0 inlineblock"-->
+                                            <!--                                                 src="/lib/assets/images/baseConponetPic/menuline.svg" alt="">-->
+                                            <div @click="scrollTo_1()" style="cursor: pointer"
+                                                 class="ml-2 hover:bg-gray-200 ">
+                                                阿斯顿发山东熬死的阿萨德熬死阿萨德撒
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+<script src="/lib/vue/vue.js"></script>
+<script src="/lib/elementui/index.js"></script>
+<script src="/lib/axios/axios.js"></script>
+<script src="/lib/js/common.js"></script>
+<script src="/lib/js/sweetalert2.js"></script>
+
+<script type="text/javascript">
+
+
+    new Vue({
+        el: "#app",
+        data: {
+            baseUrl: GetBaseUrl(),
+            isLogin:getLocalStorage("isLogin"),
+
+        },
+        methods: {
+            goto(url){
+                window.location.href = url;
+            },
+
+
+        },
+        created() {
+
+        },
+        mounted() {
+
+        }
+    })
+
+
+</script>
+
+
+</body>
+
+</html>

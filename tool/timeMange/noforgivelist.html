@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../../lib/assets/images/people/yang.svg">
+    <!-- 引入样式 -->
+    <title>学乐之舟</title>
+
+
+    <!-- 引入样式 -->
+    <link href="../../lib/elementui/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../lib/css/common.css" type="text/css">
+    <script src="../../lib/js/tailwind4-3.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+
+<body class="bg-gray-50">
+
+<div id="app" class="" v-cloak>
+    <div class="loading-modal-overlay"  id="zzcLoadingModal" >
+        <!-- 遮罩层内容，例如： -->
+        <div class="  w-full h-full flex items-center justify-center" >
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+    <!--    从官网的例子-->
+    <header class="bg-[#3f3f46] text-white">
+        <nav class="mx-auto flex max-w-7xl items-start  p-5 md:px-8" aria-label="Global">
+            <div class="flex md:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <!--                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">-->
+                </a>
+            </div>
+
+            <div class="hidden md:flex md:gap-x-12">
+
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest ">活动</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">项目</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">个人中心</a>
+            </div>
+            <div class="hidden md:flex md:flex-1 md:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class=" md:hidden  flex flex-1  justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">
+                    <img class="h-5 w-auto" src="../../lib/assets/images/baseConponetPic/menuright.svg" alt="">
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div class="fixed inset-y-0 right-0 z-10 w-[80%] overflow-y-auto bg-[#3f3f46] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                             alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Features</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Marketplace</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Company</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体 -->
+    <div class="w-full bg-gray-50 flex justify-center">
+
+        <!--        主体-->
+        <div class="w-full md:w-[70%] 2xl:w-[55%]   grid grid-cols-12  ">
+            <!--            左边-->
+            <div class="hidden md:grid md:col-span-3 m-3   rounded-lg">
+                <div class="text-sm text-gray-300">
+                    <div class="text-sm text-gray-300 p-3 flex justify-start">
+                        <img src="../../lib/assets/images/baseConponetPic/managezuobian.svg" alt=""
+                             class="w-[20px] h-[20px]">
+                        <p class="ml-2">时间管理</p>
+                    </div>
+<!--                    hover:bg-gray-200-->
+                    <div class="text-lg text-gray-600 font-bold bg-gray-200 rounded-lg p-2" style="cursor: pointer" >
+                        <p class="ml-10">备忘录</p>
+                    </div>
+                    <div class="text-lg text-gray-600  hover:bg-gray-200 rounded-lg p-2" style="cursor: pointer" >
+                        <p class="ml-10">番茄时间</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-span-12 grid md:col-span-8  p-5 bg-white" >
+                <el-breadcrumb class="mt-2 " separator="/">
+                    <el-breadcrumb-item>备忘录列表</el-breadcrumb-item>
+                </el-breadcrumb>
+
+                <div class=" mt-5 mx-2  w-[40px]" @click="showAddcontent">
+                    <img src="../../lib/assets/images/baseConponetPic/addcircle.svg">
+                </div>
+
+                <div class=" min-h-[90px]  rounded-lg shadow hover:shadow-lg bg-gray-50
+                  w-full md:w-[100%] relative mt-5" v-for="item in dataList">
+
+                    <div class="absolute  p-3 px-4    w-[90%]" @click="gotoDetail(item.id)" style="cursor: pointer" >
+
+                        <div class="text-md truncate-single-line w-full tracking-wide   h-full">
+                            {{item.planDate}} &nbsp;({{item.week}})
+                        </div>
+                        <div class="mt-2 flex justify-start items-center">
+
+                            <div class="flex  items-center   text-gray-600 text-[15px] ">
+                                <el-tooltip class="item" effect="dark" content="未完成数量"
+                                            placement="bottom">
+                                    <img class="w-[30px]" src="../../lib/assets/images/baseConponetPic/wordhard.svg" alt="">
+                                </el-tooltip>
+                              &nbsp;{{item.noFinishList.length}}
+                            </div>
+                            <el-divider direction="vertical"></el-divider>
+
+                            <div class="flex  items-center   text-gray-600 text-[15px] ">
+                                <el-tooltip class="item" effect="dark" content="已完成数量"
+                                            placement="bottom">
+                                <img class="w-[24px]" src="../../lib/assets/images/baseConponetPic/finishfull.svg" alt="">
+                                </el-tooltip>
+                               &nbsp;{{item.finishList.length}}
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="flex justify-end absolute top-[5px] right-2 z-50" >
+                        <el-dropdown class=" w-[30px] ">
+                            <img src="../../lib/assets/images/baseConponetPic/threemorepoint.svg" alt="">
+                            <el-dropdown-menu slot="dropdown">
+
+                                </el-dropdown-item>
+
+                                <el-dropdown-item @click.native="deletenofinishitem(item.id)">删除
+                                </el-dropdown-item>
+
+                            </el-dropdown-menu>
+                        </el-dropdown>
+
+
+                    </div>
+
+                </div>
+
+                <!--           分页-->
+                <div class="mt-[30px] w-full relative">
+                    <el-pagination class="absolute left-0 "
+                                   @size-change="handleSizeChange"
+                                   @current-change="handleCurrentChange"
+                                   :current-page="currentPage"
+                                   :page-size="pageSize"
+                                   :pager-count="pagerCount"
+                                   background
+                                   layout="prev, pager, next"
+                                   :total="pagetotal">
+                    </el-pagination>
+
+                </div>
+
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <!--            <button @click="aaa">asdfasd</button>-->
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+</div>
+
+<script type="text/javascript" src="../../lib/js/Sortable.min.js"></script>
+<script type="text/javascript" src="../../lib/js/jquery-1.11.0.min.js"></script>
+
+<script src="../../lib/js/tailwind4-3.js"></script>
+<script src="../../lib/vue/vue.js"></script>
+<script src="../../lib/elementui/index.js"></script>
+<script src="../../lib/axios/axios.js"></script>
+<script src="../../lib/js/common.js"></script>
+<script src="../../lib/js/sweetalert2.js"></script>
+
+<script type="text/javascript">
+
+    var timer;
+
+    new Vue({
+        el: "#app",
+        data: {
+            baseUrl: GetBaseUrl(),
+            token:getLocalStorage("token"),
+            dataList:[],
+            currentPage:0,
+            pageSize:5,
+            pagetotal:0,
+            pagerCount:5
+        },
+        methods: {
+
+            handleSizeChange(val) {
+                this.getList(val)
+            },
+            handleCurrentChange(val) {
+                this.getList(val)
+            },
+            getList(page){
+
+                showLoading();
+                axios({
+                    url: this.baseUrl + "/webapp/noforgive/list",
+                    method: "post",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer '+this.token
+                    },
+                    data: {
+                        pageSize:this.pageSize,
+                        pageNum:page
+                    }
+                }).then(({data}) => {
+                    closeLoading();
+                    if (data && data.code === 200) {
+                        this.dataList = data.rows;
+                        for (let i = 0; i < this.dataList.length; i++) {
+                            this.dataList[i].week = this.getDayOfWeek(this.dataList[i].planDate)
+                            this.dataList[i].planDate = this.formatDate(this.dataList[i].planDate)
+                            this.dataList[i].noFinishList = JSON.parse(this.dataList[i].noFinishList)
+                            this.dataList[i].finishList = JSON.parse(this.dataList[i].finishList)
+                        }
+                        this.pagetotal = data.total
+                    } else {
+                        this.$message.error(data.msg);
+
+                    }
+                })
+            },
+            gotoDetail(id){
+                window.location.href = './noforgive.html?id='+id;
+            },
+            showAddcontent(){
+                window.location.href = 'noforgive.html';
+            },
+            deletenofinishitem(id){
+                axios({
+                    url: this.baseUrl + "/webapp/noforgive/delete",
+                    method: "post",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer '+this.token
+                    },
+                    data: {
+                        id:id
+                    }
+                }).then(({data}) => {
+                    if (data && data.code === 200) {
+                        this.getList(this.currentPage);
+                    } else {
+                        this.$message.error(data.msg);
+
+                    }
+                })
+            },
+            handleVisibilityChange(){
+
+                if (document.visibilityState === 'visible') {
+                    this.getList(this.currentPage);
+                } else if (document.visibilityState === 'hidden') {
+
+                }
+            },
+            formatDate(inputDate) {
+                // 使用正则表达式匹配并提取年月日时分秒
+                const regex = /(\d{4})-(\d{2})-(\d{2})\s(\d{2}):(\d{2}):(\d{2})/;
+                const matches = inputDate.match(regex);
+
+                if (matches) {
+                    const [, year, month, day, , , ] = matches;
+
+                    // 格式化并返回结果
+                    return `${year}年${month}月${day}日`;
+                } else {
+                    throw new Error('日期格式不正确');
+                }
+            },
+            getDayOfWeek(inputDate) {
+                // 创建一个Date对象
+                const date = new Date(inputDate); // 处理日期格式兼容性
+
+                // 获取星期几（0代表星期日，1代表星期一，...，6代表星期六）
+                const dayOfWeek = date.getDay();
+
+                // 定义一个数组来存储星期的名称
+                const daysOfWeek = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+                // 返回星期几的名称
+                return daysOfWeek[dayOfWeek];
+            }
+
+        },
+        created() {
+            this.getList(this.currentPage);
+        },
+        mounted() {
+            document.addEventListener('visibilitychange', this.handleVisibilityChange);
+
+        },
+        beforeDestroy() {
+            console.log(33333)
+            document.removeEventListener('visibilitychange', this.handleVisibilityChange);
+        }
+    })
+
+
+</script>
+
+<style>
+
+
+
+    .truncate-single-line {
+        /* 强制文本在一行内显示 */
+        white-space: nowrap;
+
+        /* 隐藏超出的文本 */
+        overflow: hidden;
+
+        /* 使用省略号表示被隐藏的文本 */
+        text-overflow: ellipsis;
+    }
+</style>
+
+</body>
+
+</html>

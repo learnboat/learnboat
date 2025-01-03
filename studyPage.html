@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title></title>
+
+  <!-- 引入样式 -->
+  <link href="../../lib/elementui/index.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../lib/css/daisyui.css">
+  <script src="../../lib/js/tailwind4-3.js"></script>
+
+
+<!--编辑器js-->
+  <script type="text/javascript" charset="utf-8" src="lib/editorPlus/ueditor.config.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lib/editorPlus/ueditor.all.js"></script>
+  <script type="text/javascript" charset="utf-8" src="lib/editorPlus/lang/zh-cn/zh-cn.js?7a537435"></script>
+
+
+
+<body class="">
+
+  <div id="app">
+
+    <!-- 预习 -->
+    <div class="mx-4 mt-4 p-2 bg-base-300 rounded-lg">预习</div>
+    <script id="editor_pre" type="text/plain" class="mx-4  mt-4" style="height:300px;width: 80%"></script>
+
+
+
+     <!-- 笔记正文 -->
+     <div class="mx-4 mt-4 p-2 bg-base-300 rounded-lg">笔记正文</div>
+    <script id="editor_content" type="text/plain" class="mx-4  mt-4" style="height:300px;width: 80%"></script>
+
+
+      <!-- 预习 -->
+    <div class="mx-4 mt-4 p-2 bg-base-300 rounded-lg">预习</div>
+    <script id="editor_sum" type="text/plain" class="mx-4  mt-4" style="height:300px;width: 80%"></script>
+
+
+
+  </div>
+
+  <script src="../../lib/vue/vue.js"></script>
+  <script src="../../lib/elementui/index.js"></script>
+
+  <script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    UE.getEditor('editor_pre', {
+      //清空了工具栏
+      toolbars: [['combox', 'bold', 'button', 'dialog']]
+    });
+
+    UE.getEditor('editor_content', {
+      //清空了工具栏
+      toolbars: [['combox', 'bold', 'button', 'dialog']]
+    });
+
+    UE.getEditor('editor_sum', {
+      //清空了工具栏
+      toolbars: [['combox', 'bold', 'button', 'dialog']]
+    });
+  </script>
+
+  <script type="text/javascript">
+
+    new Vue({
+      el: "#app",
+      data: {
+
+      },
+      methods: {
+      },
+      created() {
+
+      },
+      mounted() {
+      }
+    })
+
+
+
+
+  </script>
+
+  <style>
+  </style>
+
+</body>
+
+</html>

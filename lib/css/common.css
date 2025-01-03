@@ -1,0 +1,119 @@
+.icon-link {
+
+    border-bottom: 2px dashed blue;
+    text-decoration: none; /* 去除链接下划线 */
+    color: blue; /* 链接颜色 */
+
+}
+
+.icon-link i {
+    margin-right: 0px; /* 图标和文本之间的距离 */
+}
+
+.rightborder {
+    border-top-width: 2px;
+    border-right-width: 5px;
+    border-bottom-width: 7px;
+    border-left-width: 2px;
+    border-style: solid;
+    border-color: #595959;
+    /*border-color: #e0f2fe;*/
+    /*border-color: #fde047;*/
+}
+
+.leftborder {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 7px;
+    border-left-width: 5px;
+    border-style: solid;
+    border-color: #595959;
+}
+
+
+.inlineblock {
+    display: inline-block;
+    vertical-align: middle; /* 确保图片和文本垂直居中 */
+}
+
+.floatBlockClass{
+    position: fixed !important;
+    width: 24vw !important;
+    height: 90vh !important;
+}
+
+.floatLoadingClass{
+    position: fixed !important;
+
+}
+
+.loading-modal-overlay {
+    display: none; /* 默认不显示 */
+    position: fixed; /* 固定定位 */
+    z-index: 9999999; /* 置于顶层 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    overflow: auto; /* 如果需要滚动 */
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+
+.loading-spinner {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*波浪*/
+/*.bg-tupian{*/
+/*    background: radial-gradient(circle at bottom ,#f9f9f9, #f9f9f9 10%,transparent 10%, transparent 20%, #f9f9f9 20%, #f9f9f9 30%, transparent 30%, transparent 40%, #f9f9f9 40%, #f9f9f9 50%, transparent 50%, transparent 60%, #f9f9f9 60%, #f9f9f9 70%, transparent 70%, transparent 80%, #f9f9f9 80%, #f9f9f9 90%, transparent 90%);*/
+/*    background-size: 40em 40em;*/
+/*    background-color: #ffffff;*/
+/*    opacity: 1*/
+/*}*/
+
+/*尖波浪*/
+/*.bg-tupian{*/
+/*    background: linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(315deg, #ffffff 25%, transparent 25%),linear-gradient(45deg, transparent 24%,#f9f9f9 25%, #f9f9f9 45%, transparent 45%), linear-gradient(315deg, transparent 24%,#f9f9f9 25%, #f9f9f9 45%, transparent 45%);*/
+/*    background-size: 6em 6em;*/
+/*    background-color: #ffffff;*/
+/*    opacity: 1*/
+/*}*/
+
+/*斜上波浪*/
+/*.bg-tupian{*/
+/*    background: radial-gradient(circle at top left,transparent 25%,#f9f9f9 25.5%, #f9f9f9 36%, transparent 37%, transparent 100%),radial-gradient(circle at bottom right,transparent 34%,#f9f9f9 34.5%, #f9f9f9 45.5%, transparent 46%, transparent 100%);*/
+/*    background-size: 6em 6em;*/
+/*    background-color: #ffffff;*/
+/*    opacity: 1*/
+/*}*/
+/*点*/
+/*.bg-tupian{*/
+/*    background: radial-gradient(#f9f9f9 15%, transparent 16%), repeating-linear-gradient(0deg, transparent 6.5%, #ffffff 7%, #ffffff 9%, transparent 10%), linear-gradient(45deg, transparent 49%, #f9f9f9 49%, #f9f9f9 51%, transparent 51%), linear-gradient(-45deg, transparent 49%, #f9f9f9 49%, #f9f9f9 51%, transparent 51%);*/
+/*    background-size: 6em 6em;*/
+/*    background-color: #ffffff;*/
+/*    opacity: 1*/
+/*}*/
+/*菱形 感觉还行*/
+.bg-tupian{
+    background: linear-gradient(135deg, #f9f9f9 25%, transparent 25%),linear-gradient(225deg, #f9f9f9 25%, transparent 25%),linear-gradient(315deg, #f9f9f9 25%, transparent 25%),linear-gradient(45deg, #f9f9f9 25%, transparent 25%);
+    background-size: 40em 40em;
+    background-color: #ffffff;
+    opacity: 1
+}
+
+.titlebox{
+  box-shadow: 4px 4px 4px #888;
+
+}

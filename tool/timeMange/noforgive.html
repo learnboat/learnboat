@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../../lib/assets/images/people/yang.svg">
+    <!-- 引入样式 -->
+    <title>学乐之舟</title>
+
+
+    <!-- 引入样式 -->
+    <link href="../../lib/elementui/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../lib/css/common.css" type="text/css">
+    <script src="../../lib/js/tailwind4-3.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+
+<body class="bg-gray-50">
+
+<div id="app" class="" v-cloak>
+
+
+    <div class="loading-modal-overlay" id="zzcLoadingModal">
+        <!-- 遮罩层内容，例如： -->
+        <div class="  w-full h-full flex items-center justify-center">
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+    <!--    从官网的例子-->
+    <header class="bg-[#3f3f46] text-white">
+        <nav class="mx-auto flex max-w-7xl items-start  p-5 md:px-8" aria-label="Global">
+            <div class="flex md:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <!--                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">-->
+                </a>
+            </div>
+
+            <div class="hidden md:flex md:gap-x-12">
+
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest ">活动</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">项目</a>
+                <a href="#" class="text-lg font-semibold leading-6 text-white tracking-widest">个人中心</a>
+            </div>
+            <div class="hidden md:flex md:flex-1 md:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class=" md:hidden  flex flex-1  justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">
+                    <img class="h-5 w-auto" src="../../lib/assets/images/baseConponetPic/menuright.svg" alt="">
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div class="fixed inset-y-0 right-0 z-10 w-[80%] overflow-y-auto bg-[#3f3f46] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                             alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Features</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Marketplace</a>
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Company</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                               class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-black">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体 -->
+    <div class="w-full bg-gray-50 flex justify-center">
+
+        <!--        主体-->
+        <div class="w-full md:w-[70%] 2xl:w-[55%]   grid grid-cols-12  ">
+            <!--            左边-->
+            <div class="hidden md:grid md:col-span-3 m-3   rounded-lg">
+                <div class="text-sm text-gray-300">
+                    <div class="text-sm text-gray-300 p-3 flex justify-start">
+                        <img src="../../lib/assets/images/baseConponetPic/managezuobian.svg" alt=""
+                             class="w-[20px] h-[20px]">
+                        <p class="ml-2">时间管理</p>
+                    </div>
+                    <!--                    hover:bg-gray-200-->
+                    <div class="text-lg text-gray-600 font-bold bg-gray-200 rounded-lg p-2" style="cursor: pointer">
+                        <p class="ml-10">备忘录</p>
+                    </div>
+                    <div class="text-lg text-gray-600   hover:bg-gray-200  rounded-lg p-2" style="cursor: pointer">
+                        <p class="ml-10">番茄时间</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid col-span-12 md:grid md:col-span-8  p-5 bg-white">
+
+                <el-breadcrumb class="mt-2 " separator="/">
+                    <el-breadcrumb-item><a href="./noforgivelist.html">备忘录列表</a></el-breadcrumb-item>
+                    <el-breadcrumb-item>{{pageId != null ? '编辑' : '新增'}}</el-breadcrumb-item>
+                </el-breadcrumb>
+
+                <div>
+                    <button @click="saveAction"
+                            class="w-[80px] bg-green-500 text-white text-sm  font-bold  rounded-lg h-[30px] mt-5">
+                        保存
+                    </button>
+                    <span @click="copylast"
+                            class="text-blue-700 text-xs ml-2 underline  underline-offset-1 " style="cursor: pointer">复制上一次</span>
+                </div>
+                <div class="text-gray-400 font-bold mt-5">计划日期</div>
+
+                <div class="mt-5">
+                    <el-date-picker
+                            v-model="planDat"
+                            type="date"
+                            format="yyyy 年 MM 月 dd 日"
+                            value-format="yyyy-MM-dd"
+                            placeholder="选择日期">
+                    </el-date-picker>
+                </div>
+
+                <div class="text-gray-400 font-bold mt-5">添加备忘录</div>
+
+                <!--                未完成-->
+
+                <div class="draggable" v-for="(item,index) in no_finish_list">
+                    <div class=" mt-[10px] ">
+                        <div v-if="item.levelValue == 'A'"
+                             class="flex justify-between shadow-md border-gray-300 border-2 rounded-lg bg-[#ffffff]  w-full  p-4">
+
+                            <div>
+                                <div class="  ">
+                                    {{item.textarea}}
+                                </div>
+                                <div class="mt-5 flex justify-start items-center">
+                                    <div v-if="item.contentCounter == 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-gray-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+                                    <div v-if="item.contentCounter != 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-red-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+
+                                    <el-divider direction="vertical"></el-divider>
+                                    <div class="text-white  bg-orange-400  w-[30px] h-[20px] rounded-lg text-center">{{item.levelValue}}</div>
+                                    <el-divider direction="vertical"></el-divider>
+                                    <span class="text-purple-600  text-sm p-[5px] rounded">#{{item.type}}</span>
+                                </div>
+                            </div>
+                            <div>
+                                <el-dropdown class=" w-[30px] ">
+                                    <img src="../../lib/assets/images/baseConponetPic/threemorepoint.svg" alt="">
+                                    <el-dropdown-menu slot="dropdown">
+                                        <el-dropdown-item v-show="index != 0" @click.native="zhidingitem(index)">置顶
+                                        </el-dropdown-item>
+                                        <el-dropdown-item v-show="index != 0" @click.native="shangyiitem(index)">上移
+                                        </el-dropdown-item>
+                                        <el-dropdown-item v-show="index != (no_finish_list.length-1)"
+                                                          @click.native="xiayiitem(index)">下移
+                                        </el-dropdown-item>
+                                        <el-dropdown-item @click.native="finishitem(index)">已完成
+                                        </el-dropdown-item>
+                                        <el-dropdown-item @click.native="deletenofinishitem(index)">删除
+                                        </el-dropdown-item>
+
+                                    </el-dropdown-menu>
+                                </el-dropdown>
+                            </div>
+
+                        </div>
+                        <div v-else-if="item.levelValue == 'B'"
+                             class="flex justify-between shadow-md border-gray-300 border-2 rounded-lg bg-[#ffffff]  w-full  p-4">
+                            <div>
+                                <div class="  ">
+                                    {{item.textarea}}
+                                </div>
+
+                                <div class="mt-5 flex justify-start items-center">
+                                    <div v-if="item.contentCounter == 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-gray-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+                                    <div v-if="item.contentCounter != 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-red-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+
+                                    <el-divider direction="vertical"></el-divider>
+                                    <div class="text-white  bg-blue-400  w-[30px] h-[20px] rounded-lg text-center">{{item.levelValue}}</div>
+                                    <el-divider direction="vertical"></el-divider>
+                                    <span class="text-purple-600  text-sm p-[5px] rounded">#{{item.type}}</span>
+                                </div>
+
+
+                            </div>
+                            <div>
+                                <el-dropdown class=" w-[30px] ">
+                                    <img src="../../lib/assets/images/baseConponetPic/threemorepoint.svg" alt="">
+                                    <el-dropdown-menu slot="dropdown">
+                                        <el-dropdown-item v-show="index != 0" @click.native="zhidingitem(index)">置顶
+                                        </el-dropdown-item>
+                                        <el-dropdown-item v-show="index != 0" @click.native="shangyiitem(index)">上移
+                                        </el-dropdown-item>
+                                        <el-dropdown-item v-show="index != (no_finish_list.length-1)"
+                                                          @click.native="xiayiitem(index)">下移
+                                        </el-dropdown-item>
+                                        <el-dropdown-item @click.native="finishitem(index)">已完成
+                                        </el-dropdown-item>
+                                        <el-dropdown-item @click.native="deletenofinishitem(index)">删除
+                                        </el-dropdown-item>
+
+                                    </el-dropdown-menu>
+                                </el-dropdown>
+                            </div>
+
+                        </div>
+                        <div v-else="item.levelValue == 'C'"
+                             class="flex justify-between shadow-md border-gray-300 border-2 rounded-lg bg-[#ffffff]  w-full  p-4">
+                            <div>
+                                <div class="  ">
+                                    {{item.textarea}}
+                                </div>
+                                <div class="mt-5 flex justify-start items-center">
+                                    <div v-if="item.contentCounter == 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-gray-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+                                    <div v-if="item.contentCounter != 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-red-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+
+                                    <el-divider direction="vertical"></el-divider>
+                                    <div class="text-white  bg-green-400  w-[30px] h-[20px] rounded-lg text-center">{{item.levelValue}}</div>
+                                    <el-divider direction="vertical"></el-divider>
+                                    <span class="text-purple-600  text-sm p-[5px] rounded">#{{item.type}}</span>
+                                </div>
+                            </div>
+                            <div>
+                                <el-dropdown class=" w-[30px] ">
+                                    <img src="../../lib/assets/images/baseConponetPic/threemorepoint.svg" alt="">
+                                    <el-dropdown-menu slot="dropdown">
+                                        <el-dropdown-item v-show="index != 0" @click.native="zhidingitem(index)">置顶
+                                        </el-dropdown-item>
+                                        <el-dropdown-item v-show="index != 0" @click.native="shangyiitem(index)">上移
+                                        </el-dropdown-item>
+                                        <el-dropdown-item v-show="index != (no_finish_list.length-1)"
+                                                          @click.native="xiayiitem(index)">下移
+                                        </el-dropdown-item>
+                                        <el-dropdown-item @click.native="finishitem(index)">已完成
+                                        </el-dropdown-item>
+                                        <el-dropdown-item @click.native="deletenofinishitem(index)">删除
+                                        </el-dropdown-item>
+
+                                    </el-dropdown-menu>
+                                </el-dropdown>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="m-4  w-[40px]" @click="showAddcontent">
+                    <img src="../../lib/assets/images/baseConponetPic/addcircle.svg">
+                </div>
+
+                <div v-show="finish_list.length != 0">
+                    <el-divider content-position="left">
+                        <div class="text-gray-400 font-bold">已完成</div>
+                    </el-divider>
+                </div>
+
+                <!--                已完成-->
+                <div class="flex justify-start" v-for="(item,index) in finish_list">
+                    <div class="w-[40px] flex items-center">
+                        <img src="../../lib/assets/images/baseConponetPic/finishcircle.svg" alt="">
+                    </div>
+                    <div class="ml-2 mt-[10px] w-full  ">
+                        <div v-if="item.levelValue == 'A'"
+                             class="flex justify-between shadow-md rounded-lg bg-[#e5e7eb]   w-full  p-4">
+
+                            <div>
+                                <div class="  ">
+                                    {{item.textarea}}
+                                </div>
+                                <div class="mt-5 flex justify-start items-center">
+                                    <div v-if="item.contentCounter == 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-gray-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+                                    <div v-if="item.contentCounter != 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-red-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+
+                                    <el-divider direction="vertical"></el-divider>
+                                    <div class="text-white  bg-orange-400  w-[30px] h-[20px] rounded-lg text-center">{{item.levelValue}}</div>
+                                    <el-divider direction="vertical"></el-divider>
+                                    <span class="text-purple-600  text-sm p-[5px] rounded">#{{item.type}}</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div v-else-if="item.levelValue == 'B'"
+                             class="flex justify-between shadow-md rounded-lg  bg-[#e5e7eb]  w-full  p-4">
+                            <div>
+                                <div class="  ">
+                                    {{item.textarea}}
+                                </div>
+                                <div class="mt-5 flex justify-start items-center">
+                                    <div v-if="item.contentCounter == 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-gray-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+                                    <div v-if="item.contentCounter != 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-red-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+
+                                    <el-divider direction="vertical"></el-divider>
+                                    <div class="text-white  bg-blue-400  w-[30px] h-[20px] rounded-lg text-center">{{item.levelValue}}</div>
+                                    <el-divider direction="vertical"></el-divider>
+                                    <span class="text-purple-600  text-sm p-[5px] rounded">#{{item.type}}</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div v-else="item.levelValue == 'C'"
+                             class="flex justify-between shadow-md rounded-lg  bg-[#e5e7eb] w-full  p-4">
+                            <div>
+                                <div class="  ">
+                                    {{item.textarea}}
+                                </div>
+                                <div class="mt-5 flex justify-start items-center">
+                                    <div v-if="item.contentCounter == 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-gray-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+                                    <div v-if="item.contentCounter != 0" class="w-auto min-w-[22px]  px-1 text-[15px]  bg-red-400   text-white rounded-full text-center">{{item.contentCounter}}</div>
+
+                                    <el-divider direction="vertical"></el-divider>
+                                    <div class="text-white  bg-green-400  w-[30px] h-[20px] rounded-lg text-center">{{item.levelValue}}</div>
+                                    <el-divider direction="vertical"></el-divider>
+                                    <span class="text-purple-600  text-sm p-[5px] rounded">#{{item.type}}</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <el-dialog
+            :show-close="false"
+            :close-on-click-modal="false"
+            title="添加备忘录"
+            :visible.sync="dialogVisible"
+            :width="dialogWidth"
+            :before-close="handleClose">
+
+        <div class="flex justify-start">
+
+            <div class="  w-full">
+
+                <div class="">
+                    <div class="flex justify-start font-bold"><span class="text-red-500">*&nbsp;</span>分类
+
+                    </div>
+                    <div>
+
+                        <el-autocomplete
+                                class="inline-input w-[90%] mt-2"
+                                v-model="form.type"
+                                :fetch-suggestions="querySearch"
+                                placeholder="请输入分类，如运动/工作/娱乐"
+                                @select="handleSelect"
+                        ></el-autocomplete>
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <div class="flex justify-start font-bold"><span class="text-red-500">*&nbsp;</span>等级
+                        <el-tooltip class="item" effect="dark" content="等级A-困难。等级B-中等。等级C-容易。"
+                                    placement="bottom">
+                            <img class="w-[15px] ml-1" src="../../lib/assets/images/baseConponetPic/tips.svg" alt="">
+                        </el-tooltip>
+
+                    </div>
+                    <el-select class="w-[110px] mt-2" v-model="form.levelValue" placeholder="选择等级">
+                        <el-option
+                                v-for="item in levelOptions"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value">
+                        </el-option>
+                    </el-select>
+                </div>
+                <div class="mt-2">
+                    <div class="font-bold"><span class="text-red-500 ">*&nbsp;</span>需完成内容</div>
+
+                    <el-autocomplete
+                            class="w-[90%] md:w-[80%] mt-2"
+                            type="textarea"
+                            v-model="form.textarea"
+                            :fetch-suggestions="querySearch_item"
+                            placeholder="请输入内容，如：俯卧撑（个）/记单词（个）/游泳（分钟）"
+                            @select="handleSelect_item"
+                    ></el-autocomplete>
+
+                </div>
+                <div class="mt-2">
+                    <div class="flex justify-start font-bold"> 完成数量
+                        <el-tooltip class="item" effect="dark"
+                                    content="完成数量对应内容写的数量单位，如需要完成俯卧撑10个，数量就是10"
+                                    placement="bottom">
+                            <img class="w-[15px] ml-1" src="../lib/assets/images/baseConponetPic/tips.svg" alt="">
+                        </el-tooltip>
+
+                    </div>
+                    <div class="mt-3">
+                        <el-input-number size="small" v-model="form.contentCounter"
+                                         :min="minchoose"></el-input-number>
+                    </div>
+
+                    <div class=" mt-3 text-gray-400"> (<span class="text-red-500">*</span>为必填)</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <span slot="footer" class="dialog-footer">
+         <button @click="dialogVisible = false"    class="w-[80px] h-[40px] bg-gray-300  text-white
+          text-sm     rounded-lg ">
+             取 消
+         </button>
+             <button @click="addConfirm"    class="w-[80px] h-[40px] bg-blue-500  text-white
+          text-sm    rounded-lg ">
+             确 定
+         </button>
+            </button>
+            <button @click="directFinish"    class="w-[80px] h-[40px] bg-green-500  text-white
+          text-sm   rounded-lg ">
+             已完成
+         </button>
+
+          </span>
+    </el-dialog>
+
+</div>
+
+
+</div>
+
+<script type="text/javascript" src="../../lib/js/jquery-1.11.0.min.js"></script>
+
+<script src="../../lib/js/tailwind4-3.js"></script>
+<script src="../../lib/vue/vue.js"></script>
+<script src="../../lib/elementui/index.js"></script>
+<script src="../../lib/axios/axios.js"></script>
+<script src="../../lib/js/common.js"></script>
+
+<script type="text/javascript">
+
+    var timer;
+
+    new Vue({
+        el: "#app",
+        data: {
+            pageId: null,
+            token: getLocalStorage("token"),
+            baseUrl: GetBaseUrl(),
+            levelOptions: [{
+                value: 'A',
+                label: '等级A'
+            }, {
+                value: 'B',
+                label: '等级B'
+            }, {
+                value: 'C',
+                label: '等级C'
+            }],
+            form: {
+                levelValue: '',
+                textarea: '',
+                contentCounter: 0,
+                type: '',
+            },
+
+            minchoose: 0,
+            dialogVisible: false,
+            dialogWidth: '80%',
+            planDat: '',
+            no_finish_list:[],
+            finish_list:[],
+
+            sortList: [],
+            sortMap: {},
+            itemList: [],
+        },
+        methods: {
+
+            handleClose(done) {
+                this.$confirm('确认关闭？')
+                    .then(_ => {
+                        done();
+                    })
+                    .catch(_ => {
+                    });
+            },
+            addConfirm() {
+                //校验
+                if (this.form.levelValue == '') {
+                    this.$message({
+                        type: 'error',
+                        message: '请选择等级'
+                    });
+                    return;
+                }
+                if (this.form.textarea == '') {
+                    this.$message({
+                        type: 'error',
+                        message: '请输入内容'
+                    });
+                    return;
+                }
+
+                this.no_finish_list.push(this.form)
+                this.dialogVisible = false
+            },
+
+            getCurrentDateFormatted() {
+                const now = new Date();
+                // 获取年、月、日
+                const year = now.getFullYear(); // 4位年份
+                const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份是从0开始的，所以要+1，并使用padStart来确保是两位数
+                const day = String(now.getDate()).padStart(2, '0'); // 使用padStart来确保是两位数
+
+                // 拼接成“年-月-日”格式
+                return `${year}年${month}月${day}日`;
+            },
+            showAddcontent() {
+                this.dialogVisible = true;
+                this.form = {
+                    levelValue: '',
+                    textarea: '',
+                    contentCounter: 0,
+                    type: ''
+                }
+            },
+            zhidingitem(index) {
+
+                // 检查索引是否在数组范围内
+                if (index < 0 || index >= this.no_finish_list.length) {
+                    console.error('Index is out of bounds');
+                    return;
+                }
+
+                // 保存要移动到第一个位置的元素
+                const element = this.no_finish_list[index];
+                // 移除该元素
+                this.no_finish_list.splice(index, 1);
+                // 将元素添加到数组的开始
+                this.no_finish_list.unshift(element);
+            },
+            shangyiitem(index) {
+                // 检查索引是否在有效范围内且不是第一个元素
+                if (index <= 0 || index >= this.no_finish_list.length) {
+                    console.error('Index is out of bounds or is the first element');
+                    return;
+                }
+                // 交换元素
+                // 交换元素
+                const temp = this.no_finish_list[index];
+                this.no_finish_list.splice(index, 1); // 先移除当前元素
+                this.no_finish_list.splice(index - 1, 0, temp); // 再将元素插入到前一个位置
+
+            },
+            xiayiitem(index) {
+// 检查索引是否在有效范围内且不是最后一个元素
+                if (index < 0 || index >= this.no_finish_list.length - 1) {
+                    console.error('Index is out of bounds or is the last element');
+                    return;
+                }
+
+                // 交换元素
+                const temp = this.no_finish_list[index];
+                this.no_finish_list.splice(index, 1); // 先移除当前元素
+                this.no_finish_list.splice(index + 1, 0, temp); // 再将元素插入到后一个位置
+            },
+            finishitem(index) {
+                const itemToRemove = this.no_finish_list.splice(index, 1)[0]; // 移除并返回被移除的元素
+                this.finish_list.push(itemToRemove); // 将元素添加到targetArray
+            },
+            deletenofinishitem(index) {
+                this.no_finish_list.splice(index, 1)
+            },
+            directFinish() {
+
+                //校验
+                if (this.form.levelValue == '') {
+                    this.$message({
+                        type: 'error',
+                        message: '请选择等级'
+                    });
+                    return;
+                }
+                if (this.form.textarea == '') {
+                    this.$message({
+                        type: 'error',
+                        message: '请输入内容'
+                    });
+                    return;
+                }
+
+                this.finish_list.push(this.form)
+                this.dialogVisible = false
+            },
+            saveAction() {
+                let id = GetQueryString("id");
+                if (id != null) {
+                    axios({
+                        url: this.baseUrl + "/webapp/noforgive/edit",
+                        method: "post",
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + this.token
+                        },
+                        data: {
+                            id: id,
+                            planDate: this.planDat,
+                            noFinishList: JSON.stringify(this.no_finish_list),
+                            finishList: JSON.stringify(this.finish_list)
+                        }
+                    }).then(({data}) => {
+                        if (data && data.code === 200) {
+                            this.$message.success("编辑成功");
+
+                        } else {
+                            this.$message.error(data.msg);
+
+                        }
+                    })
+                } else {
+                    axios({
+                        url: this.baseUrl + "/webapp/noforgive/add",
+                        method: "post",
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + this.token
+                        },
+                        data: {
+                            planDate: this.planDat,
+                            noFinishList: JSON.stringify(this.no_finish_list),
+                            finishList: JSON.stringify(this.finish_list)
+                        }
+                    }).then(({data}) => {
+                        if (data && data.code === 200) {
+                            this.$message.success("提交成功");
+                            window.location.href = 'noforgivelist.html';
+                        } else {
+                            this.$message.error(data.msg);
+
+                        }
+                    })
+                }
+
+            },
+            getSortList() {
+
+                axios({
+                    url: this.baseUrl + "/webapp/goal/getSortAndItemRecord",
+                    method: "get",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + this.token
+                    }
+                }).then(({data}) => {
+                    if (data && data.code === 200) {
+                        this.sortMap = data.data.sort;
+                        let list = Object.keys(this.sortMap);
+                        this.sortList = [];
+                        for (var i = 0; i < list.length; i++) {
+                            let map = {"value": ""}
+                            map["value"] = list[i]
+                            this.sortList.push(map)
+                        }
+                    } else {
+                        this.$message.error(data.msg);
+
+                    }
+                })
+
+            },
+            querySearch(queryString, cb) {
+                var restaurants = this.sortList;
+                var results = restaurants;
+                // 调用 callback 返回建议列表的数据
+                cb(results);
+            },
+
+            handleSelect(item) {
+
+                this.itemList = [];
+                for (var i = 0; i < this.sortMap[item.value].length; i++) {
+                    let map = {"value": ""}
+                    map["value"] = this.sortMap[item.value][i]
+                    this.itemList.push(map)
+                }
+
+            },
+            querySearch_item(queryString, cb) {
+                var restaurants = this.itemList;
+                var results = restaurants;
+                // 调用 callback 返回建议列表的数据
+                cb(results);
+            },
+
+            handleSelect_item(item) {
+
+            },
+            copylast(){
+                let id = GetQueryString("id");
+                axios({
+                    url: this.baseUrl + "/webapp/noforgive/copylast",
+                    method: "post",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + this.token
+                    },
+                    data: {
+                        id: id
+                    }
+                }).then(({data}) => {
+                    closeLoading()
+                    if (data && data.code === 200) {
+                        this.no_finish_list = [...this.no_finish_list, ...data.data];
+                    } else {
+                        this.$message.error(data.msg);
+
+                    }
+                })
+
+            }
+        },
+        created() {
+
+            let id = GetQueryString("id");
+            this.pageId = id;
+            if (id != null) {
+                showLoading();
+                axios({
+                    url: this.baseUrl + "/webapp/noforgive/get",
+                    method: "post",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + this.token
+                    },
+                    data: {
+                        id: id
+                    }
+                }).then(({data}) => {
+                    closeLoading()
+                    if (data && data.code === 200) {
+                        this.planDat = data.data.planDate;
+                        this.no_finish_list = JSON.parse(data.data.noFinishList);
+                        this.finish_list = JSON.parse(data.data.finishList);
+
+                    } else {
+                        this.$message.error(data.msg);
+
+                    }
+                })
+            } else {
+
+            }
+
+            this.getSortList();
+
+        },
+        mounted() {
+
+            // dialog自适应宽度
+            var val = document.body.clientWidth
+            const def = 768 // 默认宽度
+            if (val < def) {
+                this.dialogWidth = '80%'
+            } else {
+                this.dialogWidth = 400 + 'px';
+            }
+        }
+    })
+
+
+</script>
+
+<style scoped>
+
+
+</style>
+
+</body>
+
+</html>

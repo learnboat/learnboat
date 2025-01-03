@@ -1,0 +1,17 @@
+鼠标点击 style="cursor: pointer"
+
+{
+"sort":[xx,xx],
+"isLogin":1,
+"userinfo":{
+}
+}
+
+
+  window.location.href = './lesson/index.html';
+
+
+  <button @click="addConfirm"    class="w-[80px] h-[40px] bg-blue-500  text-white
+          text-sm    rounded-lg ">
+             确 定
+         </button>
